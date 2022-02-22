@@ -68,6 +68,86 @@ The *Quick Create* feature uses the default settings to create a *quick cluster*
 
 ## Task 4: OCI CLI Authentication to Oracle Cloud Console
 
+Oracle provides additional interfaces to interact with OCI resources programmatically, via Rest APIs, SDKs, and the Oracle Cloud Infrastructure Command Line Interface (OCI CLI), or short CLI. OCI CLI is extremely simple to use and integrate with your shell scripts to achieve even a much higher degree of automation.
+
+From the security perspective, CLI is just “someone” who wants to access OCI resources and hence has to authenticate itself against the Cloud Control Plane.
+
+Use an OCI user and an API key for authentication. In this case, you’ll need to put your tenancy OCID, user OCID, region name, the path to an API key, and the fingerprint of the API key. 
+![images](images/1.png)
+
+![images](images/2.png)
+
+![images](images/3.png)
+
+![images](images/4.png)
+
+The easiest way is to let OCI walk you through the setup process by executing the following command:
+
+```bash
+<copy>oci setup config</copy>
+```
+
+```bash
+$ oci setup config
+    This command provides a walkthrough of creating a valid CLI config file.
+
+    The following links explain where to find the information required by this
+    script:
+
+    User API Signing Key, OCID and Tenancy OCID:
+
+        https://docs.cloud.oracle.com/Content/API/Concepts/apisigningkey.htm#Other
+
+    Region:
+
+        https://docs.cloud.oracle.com/Content/General/Concepts/regions.htm
+
+    General config documentation:
+
+        https://docs.cloud.oracle.com/Content/API/Concepts/sdkconfig.htm
+
+
+Enter a location for your config [/home/opc/.oci/config]: 
+Enter a user OCID: ocid1.user.oc1..aaaaaaaahz4xich2aa4bnd26hqleo37rqzccn5s2szk5ecyvxjkryymqvr3a
+Enter a tenancy OCID: ocid1.tenancy.oc1..aaaaaaaabkswplpf4dyg3fhsthrbxuprhuvovdmc3vvwx3iozn4xwivrk2eq
+Enter a region by index or name(e.g.
+1: af-johannesburg-1, 2: ap-chiyoda-1, 3: ap-chuncheon-1, 4: ap-dcc-canberra-1, 5: ap-hyderabad-1,
+6: ap-ibaraki-1, 7: ap-melbourne-1, 8: ap-mumbai-1, 9: ap-osaka-1, 10: ap-seoul-1,
+11: ap-singapore-1, 12: ap-sydney-1, 13: ap-tokyo-1, 14: ca-montreal-1, 15: ca-toronto-1,
+16: eu-amsterdam-1, 17: eu-frankfurt-1, 18: eu-marseille-1, 19: eu-milan-1, 20: eu-stockholm-1,
+21: eu-zurich-1, 22: il-jerusalem-1, 23: me-abudhabi-1, 24: me-dcc-muscat-1, 25: me-dubai-1,
+26: me-jeddah-1, 27: sa-santiago-1, 28: sa-saopaulo-1, 29: sa-vinhedo-1, 30: uk-cardiff-1,
+31: uk-gov-cardiff-1, 32: uk-gov-london-1, 33: uk-london-1, 34: us-ashburn-1, 35: us-gov-ashburn-1,
+36: us-gov-chicago-1, 37: us-gov-phoenix-1, 38: us-langley-1, 39: us-luke-1, 40: us-phoenix-1,
+41: us-sanjose-1): 33
+Do you want to generate a new API Signing RSA key pair? (If you decline you will be asked to supply the path to an existing key.) [Y/n]: y
+Enter a directory for your keys to be created [/home/opc/.oci]: 
+Enter a name for your key [oci_api_key]: 
+Public key written to: /home/opc/.oci/oci_api_key_public.pem
+Enter a passphrase for your private key (empty for no passphrase): 
+Private key written to: /home/opc/.oci/oci_api_key.pem
+Fingerprint: 30:08:34:02:e9:6f:5e:bc:32:e2:1b:73:a3:d3:5a:3c
+Config written to /home/opc/.oci/config
+
+
+    If you haven't already uploaded your API Signing public key through the
+    console, follow the instructions on the page linked below in the section
+    'How to upload the public key':
+
+        https://docs.cloud.oracle.com/Content/API/Concepts/apisigningkey.htm#How2
+$
+```
+
+```bash
+<copy>vi .oci/oci_api_key_public.pem</copy>
+```
+
+![images](images/5.png)
+
+![images](images/6.png)
+
+![images](images/7.png)
+
 ## Acknowledgements
 
 * **Author** -  Ankit Pandey
