@@ -18,7 +18,11 @@ In this lab, you will:
 
 
 
-## Task 1: Install the WebLogic Kubernetes Operator
+### Task 1: Configure kubectl (Kubernetes Cluster CLI) to connect to Oracle Container Engine for Kubernetes (OKE) on Oracle Cloud Infrastructure (OCI)
+
+## Task 2: Verify Connectivity of WebLogic Kubernetes Toolkit UI to Oracle Container Engine for Kubernetes (OKE) on Oracle Cloud Infrastructure (OCI)
+
+## Task 3: Install the WebLogic Kubernetes Operator
 
 
 ## Acknowledgements

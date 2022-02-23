@@ -13,7 +13,7 @@
         },
         {
             "title": "Lab 1: Creation of VM From Marketplace Image",
-            "filename": "../create-vm/crate-vm.md"
+            "filename": "../create-vm/create-vm.md"
         },
         {
             "title": "Lab 2: Creation of WKT UI Project and Model file",
@@ -24,27 +24,23 @@
             "filename": "../create-image/create-image.md"
         },
         {
-            "title": "Lab 4: Connections to Oracle Kubernetes Cluster (OKE) from WKT UT on VM",
-            "filename": "../connect-oke/connect-oke.md"
-        },
-		{
-            "title": "Lab 5: Deploy WebLogic Operator to Oracle Kubernetes Cluster (OKE)",
+            "title": "Lab 4: Deploy WebLogic Operator to Oracle Kubernetes Cluster (OKE)",
             "filename": "../deploy-operator/deploy-operator.md"
         },
 		{
-            "title": "Lab 6: Deploy WebLogic Domain to Oracle Kubernetes Cluster (OKE)",
+            "title": "Lab 5: Deploy WebLogic Domain to Oracle Kubernetes Cluster (OKE)",
             "filename": "../deploy-domain/deploy-domain.md"
         },
 		{
-            "title": "Lab 7: Deploy Ingress Controller to Oracle Kubernetes Cluster (OKE)",
+            "title": "Lab 6: Deploy Ingress Controller to Oracle Kubernetes Cluster (OKE)",
             "filename": "../deploy-ingress/deploy-ingress.md"
         },
 	    {
-            "title": "Lab 8: Testing Application Deployment",
+            "title": "Lab 7: Testing Application Deployment",
             "filename": "../access-application/access-application.md"
         },
         {
-            "title": "Optional: Scaling a WebLogic Cluster",
+            "title": "Lab 8: Scaling a WebLogic Cluster",
             "filename": "../scale-cluster/scale-cluster.md"
         },
         {
