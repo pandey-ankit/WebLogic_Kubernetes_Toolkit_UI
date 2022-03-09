@@ -17,9 +17,9 @@ In this lab, you will:
 
 
 
-## Task 1: Prepare Primary Container Image and Push the Image to Oracle Container Image Registry
+## Task 1: Enter details of Primary Container Image 
 
-## Task 2: Prepare Primary Container Image and Push the Image to Oracle Container Image Registry 
+## Task 2: Prepare Auxiliary Image and Push the Auxiliary Image to Oracle Container Image Registry 
 
 
 ## Acknowledgements

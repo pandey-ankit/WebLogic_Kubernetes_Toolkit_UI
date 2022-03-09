@@ -17,11 +17,13 @@ In this lab, you will:
 
 
 
-## Task 1: Creation of WebLogic Kubernetes Toolkit UI Project
+## Task 1: View the Resources in existing on-premise domain
 
-## Task 2: Introspection of an Offline on-premise domain 
+## Task 2: Opening the base WKT UI Project
 
-## Task 3: Validate and Prepare Model to be deployed on Kubernetes Cluster
+## Task 3: Introspection of an Offline on-premise domain 
+
+## Task 4: Validate and Prepare Model to be deployed on Kubernetes Cluster
 
 ## Acknowledgements
 
