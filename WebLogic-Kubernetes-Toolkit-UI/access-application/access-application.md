@@ -21,10 +21,14 @@ In this lab, you will:
 ## Task 1: Access the Application through  the Browser
 
 
-## Task 2: Access the Admin Console through Browser
+![](images/10.png)
 
-## Task 3: Connection to Admin Server using WebLogic Remote Console
+## Task 2: Connection to Admin Server using WebLogic Remote Console
 
+![](images/11.png)
+![](images/12.png)
+![](images/13.png)
+![](images/14.png)
 
 ## Acknowledgements
 
