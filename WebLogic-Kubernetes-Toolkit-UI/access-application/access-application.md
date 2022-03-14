@@ -22,6 +22,8 @@ In this lab, you will:
 
 
 ![](images/10.png)
+![](images/15.png)
+
 
 ## Task 2: Connection to Admin Server using WebLogic Remote Console
 
@@ -29,6 +31,9 @@ In this lab, you will:
 ![](images/12.png)
 ![](images/13.png)
 ![](images/14.png)
+![](images/16.png)
+![](images/17.png)
+
 
 ## Acknowledgements
 

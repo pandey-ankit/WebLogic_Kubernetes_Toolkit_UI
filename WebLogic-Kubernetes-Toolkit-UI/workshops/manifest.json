@@ -20,7 +20,7 @@
             "filename": "../create-model/create-model.md"
         },
         {
-            "title": "Lab 3: Creation of Primary and Auxiliary Image",
+            "title": "Lab 3: Creation of Auxiliary Image and Pushing it in Oracle Container Image Registry",
             "filename": "../create-image/create-image.md"
         },
         {
@@ -44,7 +44,7 @@
             "filename": "../scale-cluster/scale-cluster.md"
         },
         {
-            "title": "Optional: Update a deployed application by a rolling restart of the patched image",
+            "title": "Lab 9: Making a upgrade in WebLogic Server Version ",
             "filename": "../apply-patch/apply-patch.md"
         },
       {

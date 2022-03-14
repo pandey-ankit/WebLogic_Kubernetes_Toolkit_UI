@@ -18,10 +18,17 @@ In this lab, you will:
 
 
 
-## Task 1: Creation of a New Primary Image and Pushing it to Oracle Container Image Registry
+## Task 1: Enter detail of new WebLogic Server Image as Primary Image
 
-## Task 2: Update a deployed application by a rolling restart of the new image
+![](images/15.png)
 
+## Task 2: Update a deployed application by a rolling restart of the new  primary image
+
+
+![](images/16.png)
+![](images/17.png)
+![](images/18.png)
+![](images/19.png)
 ## Acknowledgements
 
 * **Author** -  Ankit Pandey
