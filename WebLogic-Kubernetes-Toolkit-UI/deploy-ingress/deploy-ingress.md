@@ -12,13 +12,14 @@
 
 In this lab, you will:
 
-* 
+* Install Ingress Controller to the Oracle Container Engine for Kubernetes (OKE) on Oracle Cloud Infrastructure (OCI)
+* Update the Ingress Routes to Access the Application and Admin Console
 
 ### Prerequisites
 
 
 
-## Task Installtion of Ingress Controller to the Oracle Container Engine for Kubernetes (OKE) on Oracle Cloud In
+## Task 1: Installtion of Ingress Controller to the Oracle Container Engine for Kubernetes (OKE) on Oracle Cloud Infrastructure (OCI)
 
 1. Click *Ingress Controller*. You can see some pre-filled values, let it remain the same and click *Install Ingress Controller*.
     ![Install Ingress Controller](images/InstallIngressController.png)

@@ -12,13 +12,14 @@
 
 In this lab, you will:
 
-* 
+* Access the Application through the Browser and verify the load balancing between two managed server pods.
+* Connect to Admin Server using WebLogic Remote Console and explore the WewbLogic Domain and its resources.
 
 ### Prerequisites
 
 
 
-## Task 1: Access the Application through  the Browser
+## Task 1: Access the Application through the Browser
 
 1. Copy the below URL and replace *XX.XX.XX.XX* with your public IP, which is populated in last lab. You can see the below output.
     ```bash

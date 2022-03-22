@@ -11,7 +11,10 @@
 
 In this lab, you will:
 
-* 
+* Create a repository inside Oracle Cloud Container Image Registry.
+* Generate an authentication token to push auxiliary image to Oracle Cloud Container Image Registry.
+* Enter WebLogic Server Image tag inside the Primary Image Tag in WebLogic Kubernetes Toolkit UI Application.
+* Create an Auxiliary Image and push the image to Oracle Cloud Container Image Registry.
 
 ### Prerequisites
 

@@ -12,7 +12,7 @@
 
 In this lab, you will:
 
-* 
+* Scale a WebLogic Cluster using WebLogic Kubernetes Toolkit UI
 
 ### Prerequisites
 

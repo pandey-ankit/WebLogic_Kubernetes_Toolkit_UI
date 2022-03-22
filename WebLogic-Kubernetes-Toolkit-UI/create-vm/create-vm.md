@@ -11,11 +11,14 @@
 
 In this lab, you will:
 
-* 
+* Download the required artifacts from Marketplace.
+* Use the *Quick Create* cluster feature to create an OKE (Oracle Kubernetes Engine) instance with the required network resources, a node pool, and three worker nodes. The *Quick Create* approach is the fastest way to create a new cluster. If you accept all the default values, you can create a new cluster in just a few clicks.
+* Create Virtual Cloud Networks, Subnet, Security lists. Then you will add Ingress Rules, to open ports, so you can remotly access your Virtual Machine.
+* Create Virtual Machine from the custom image which you downloads from Marketplace using the created Virtual Cloud Network.
 
 ### Prerequisites
 
-You must have an [Oracle Cloud Infrastructure](https://cloud.oracle.com/en_US/cloud-infrastructure) enabled account.
+* You must have an [Oracle Cloud Infrastructure](https://cloud.oracle.com/en_US/cloud-infrastructure) enabled account.
 
 ## Task 1: Downloading the required artifacts from MarketPlace Image
 

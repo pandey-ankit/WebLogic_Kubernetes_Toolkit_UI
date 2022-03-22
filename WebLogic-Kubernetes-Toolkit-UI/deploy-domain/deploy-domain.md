@@ -12,7 +12,7 @@
 
 In this lab, you will:
 
-* 
+* Deploy the WebLogic Domain to the Oracle Container Engine for Kubernetes (OKE) on Oracle Cloud Infrastructure (OCI).
 
 ### Prerequisites
 

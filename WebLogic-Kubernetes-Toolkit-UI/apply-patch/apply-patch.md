@@ -12,7 +12,8 @@
 
 In this lab, you will:
 
-* 
+* Enter detail of new WebLogic Server Image (12.2.1.4) as Primary Image in WebLogic Kubernetes Toolkit UI Application.
+* Update a deployed application by a rolling restart of the new  primary image.
 
 ### Prerequisites
 
