@@ -21,6 +21,11 @@ In this lab, you will:
 
 ## Task 1: Installtion of Ingress Controller to the Oracle Container Engine for Kubernetes (OKE) on Oracle Cloud Infrastructure (OCI)
 
+***Ingress Controller***
+This section supports two distinct functions related to an ingress controller. First, it supports installing an ingress controller to a Kubernetes cluster. Second, it supports adding the necessary routes to an ingress controller to make a deployed WebLogic domain’s endpoints accessible.
+
+In this Task, we install the *Ingress Controller*.
+
 1. Click *Ingress Controller*. You can see some pre-filled values, let it remain the same and click *Install Ingress Controller*.
     ![Install Ingress Controller](images/InstallIngressController.png)
 
@@ -29,6 +34,8 @@ In this lab, you will:
 
 
 ## Task 2: Update the Ingress Routes to Access the Application and Admin Console
+
+In this Task, we add the Ingress routes for Accessing the Admin Console, Application. At the end, we get the accessible endpoints.
 
 1. Scroll down and click on *+* icone to add the *Ingress Route Configuration*. 
     ![Add Ingress Routes](images/AddIngressRoutes.png)
@@ -67,9 +74,10 @@ In this lab, you will:
 
 7. Once you see *Ingress Routes Update Complete* window, Click *Ok*.
     ![Update Ingress Complete](images/UpdateIngressComplete.png)
+ > You need to notedown this IP, which we will use in next lab.
 
 ## Acknowledgements
 
 * **Author** -  Ankit Pandey
 * **Contributors** - Maciej Gruszka, Sid Joshi
-* **Last Updated By/Date** - Kamryn Vinson, January 2022
+* **Last Updated By/Date** - Kamryn Vinson, March 2022

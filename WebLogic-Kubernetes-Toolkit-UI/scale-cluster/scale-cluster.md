@@ -20,6 +20,8 @@ In this lab, you will:
 
 ## Task 1: Scaling a WebLogic Cluster using WebLogic Kubernetes Toolkit UI
 
+In this Task, we scale the size of WebLogic Cluster from 2 to 3. You just need to modify the *Replica* value from 2 to 3 and re-deploy the domain again. Thus, it is easy to scale up WebLogic cluster using WebLogic Kubernetes Toolkit UI application.
+
 1. Go back to WebLogic Kubernetes Toolkit UI,  Click *WebLogic Domain*. Go to *Clusters* section and click on *Edit* icon.  
     ![Cluster Resize](images/ClusterResize.png)
 

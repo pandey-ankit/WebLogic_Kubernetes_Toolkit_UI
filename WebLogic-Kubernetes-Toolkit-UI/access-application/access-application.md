@@ -21,7 +21,9 @@ In this lab, you will:
 
 ## Task 1: Access the Application through the Browser
 
-1. Copy the below URL and replace *XX.XX.XX.XX* with your public IP, which is populated in last lab. You can see the below output.
+In this task, we access the *opdemo* application. We click on refresh icon to make multiple request to Application, to verify loadbalancing between two managed servers.
+
+1. Copy the below URL and replace *XX.XX.XX.XX* with your IP, which is populated in last lab. You can see the below output.
     ```bash
     <copy>http://XX.XX.XX.XX/opdemo/?dsname=testDatasource</copy>
     ```
@@ -33,6 +35,8 @@ In this lab, you will:
 
 
 ## Task 2: Connection to Admin Server using WebLogic Remote Console
+
+In this task, we explore the WebLogic Remote Console. We create connection to *Admin Server* in Remote Console and verify the resources in WebLogic Domain. This verifies the successful migration of an on-premise domain into the Oracle Kubernetes Cluster. 
 
 1. Go back to WebLogic Remote Console, Click on *Activities*, then select the *WebLogic Remote Console* Icon.
     ![Open Remote Console](images/OpenRemoteConsole.png)
@@ -47,7 +51,7 @@ In this lab, you will:
     URL:  `Copy_Public_IP_From_WKTUI`</br>
     ![Connection Details](images/ConnectionDetails.png)
 
-4. Click on *Edit Tree* icon, then Select *Services* -> *JDBC System Resources*. You can observe the same Datasouce, which we had seen in On-premise domain.
+4. Click on *Edit Tree* icon, then Select *Services* -> *JDBC System Resources*. You can observe the same Datasouce, which we had seen in on-premise domain.
     ![Verify Datasources](images/VerifyDatasources.png)
 
 5. Click on *Monitoring Tree* Icon as shown then select *Running Servers*. You can see we have *Admin Server* and 2 Managed Server pods are running. If you use *Scroll* Button in down side, you can see WebLogic Versin is *12.2.1.3.0*.

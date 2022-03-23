@@ -18,6 +18,8 @@ In this lab, you will:
 
 ## Task 1: Deploy the WebLogic Domain to the Oracle Container Engine for Kubernetes (OKE) on Oracle Cloud Infrastructure (OCI)
 
+The WebLogic Domain section provides support for creating and deploying the Kubernetes custom resource for the WebLogic domain as defined by the WebLogic Kubernetes Operator.
+
 1. Click *WebLogic Domain*. we used weblogic/welcome1 as *WebLogic Admin Username*/*WebLogic Admin Password*. If you want, you can change these values.
     ![Admin Credentials](images/AdminCredentials.png)
 
@@ -31,7 +33,7 @@ In this lab, you will:
 4.  In *Clusters* section, click on *Edit* icon as shown.
     ![Cluster Resize](images/ClusterResize.png)
 
-5. Enter *2* as *Replicas* and then Click *OK*.
+5. Enter *2* as *Replicas* and then Click *OK*. The size of replica decides the number of managed server in the *Running* state after successfull deployment of WebLogic Domain to Kubernetes cluster.
     ![Cluster Replicas](images/ClusterReplicas.png)
 
 6. In Datasources section, double click to edit *passwords* for two datasource. You can give *tiger* as password in both the datasources. Once done, click *Deploy Domain*.
@@ -59,4 +61,4 @@ In this lab, you will:
 
 * **Author** -  Ankit Pandey
 * **Contributors** - Maciej Gruszka, Sid Joshi
-* **Last Updated By/Date** - Kamryn Vinson, January 2022
+* **Last Updated By/Date** - Kamryn Vinson, March 2022

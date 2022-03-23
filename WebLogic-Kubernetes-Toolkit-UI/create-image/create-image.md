@@ -20,6 +20,8 @@ In this lab, you will:
 
 ## Task 1: Creation of repository inside Oracle Cloud Container Registry Repository
 
+You creates a public repository in this task. Later, we will push Auxiliary Image in this repository.
+
 1. In the Console, select the *Hamburger Menu* -> *Developer Services* -> *Container Registry* as shown.
     ![Container Registry Icon](images/ContainerRegistryIcon.png)
 
@@ -32,9 +34,9 @@ In this lab, you will:
 4. Once your repository is ready, you need to note down the tenancy namespace somewhere.
     ![Note Tenancy NameSpace](images/NoteTenancyNamespace.png)
 
-## Task 2: Generate an Authentication Token to Login to the Oracle Cloud Container Registry
+## Task 2: Generate an Authentication Token to push Auxiliary Image to the Oracle Cloud Container Registry
 
-In this step, we are going to generate an *Authentication Token*, that we will use to log in to the Oracle Cloud Container Registry.
+In this step, we are going to generate an *Authentication Token*, that we will use to push auxiliary image into the Oracle Cloud Container Registry Repository.
 
 1. Select the User Icon in the top right corner and then select *MyProfile*.
 
@@ -58,8 +60,22 @@ In this step, we are going to generate an *Authentication Token*, that we will u
 
 ## Task 3: Enter details of Primary Container Image 
 
+***Image***
+
+The Image section helps you build container images for deploying WebLogic-based applications in a Kubernetes environment using the [WebLogic Image Tool](https://oracle.github.io/weblogic-image-tool/).
+
+**Primary Image** - The image containing the Oracle Fusion Middleware software. It is used as the basis of all containers that run WebLogic Servers for the domain.
+
+**Auxiliary Image** - The image that supplies the WebLogic Deploy Tooling software and the model files. At runtime, the auxiliary image’s content is merged with the primary image’s content.
+    ![Image Structure](images/ImageStructure.png)
+
+The primary image is the one used for running the domain and the auxiliary image contains the data that defines the domain. One primary image can be reused for hundreds of domains whereas an auxiliary image is domain-specific. When using auxiliary images, the primary image contains the OS, JDK, and FMW software installations; the auxiliary image supplies the specifics for a single domain.
+
+In this Task, we are using the pre-build WebLogic Server Images. To use that images, we need to accept the license agreement. First, we accept the license agreement for WebLogic Server Images, later we use the WebLogic Server Image Tag as Primary Image in the WebLogic Kubernetes Toolkit UI.
+
 1. Click the link for the Oracle Container Registry [https://container-registry.oracle.com/](https://container-registry.oracle.com/) and sign in. For this, you need an Oracle Account.
     ![Container Registry Sign In](images/ContainerRegistrySignIn.png)
+    
 2. Enter your *Oracle Account Credentials* in the Username and Password fields, and then click *Sign In*.
     ![Login Container Registry](images/LoginContainerRegistry.png)
 

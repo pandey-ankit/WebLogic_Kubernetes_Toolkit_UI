@@ -24,6 +24,10 @@ In this lab, you will:
 
 ## Task 1: Configure kubectl (Kubernetes Cluster CLI) to connect to Oracle Container Engine for Kubernetes (OKE) on Oracle Cloud Infrastructure (OCI)
 
+In this Task, we creats the configuration file *.oci/config* and *.kube/config* in */home/opc* directory. This configuration file allow us to access Oracle Kubernetes Cluster (OKE) from this virtual machine.
+
+For more information on Client Configuration, see [Client Configuration](https://oracle.github.io/weblogic-toolkit-ui/navigate/kubernetes/k8s-client-config/).
+
 1. In the Console, select the *Hamburger Menu* -> *Developer Services* -> *Kubernetes Clusters (OKE)* as shown.
     ![OKE Icon](images/OKEIcon.png)
 
@@ -61,6 +65,8 @@ In this lab, you will:
 
 ## Task 2: Verify Connectivity of WebLogic Kubernetes Toolkit UI to Oracle Container Engine for Kubernetes (OKE) on Oracle Cloud Infrastructure (OCI)
 
+In this task, we verify the connectivity to *Oracle Kubernetes Cluster(OKE)* from the `WebLogic Kubernetes Toolkit UI` application.
+
 1. Go back to WebLogic Kubernetes Tool Kit UI, Click *Activities* and select the WebLogic Kubernetes Tool Kit UI window. Click *Client Configuration* under Kubernetes.
     ![Client Configuration](images/ClientConfiguration.png)
     ![KubernetesSection](images/KubernetesSection.png)
@@ -73,15 +79,22 @@ In this lab, you will:
 
 ## Task 3: Install the WebLogic Kubernetes Operator to Oracle Container Engine for Kubernetes (OKE) on Oracle Cloud Infrastructure (OCI)
 
+***WebLogic Kubernetes Operator***
+
+This section provides support for installing the WebLogic Kubernetes Operator (the “operator”) in the target Kubernetes cluster. 
+
 1. Click *WebLogic Operator*. You  see some pre-filled values. lets it remain the same and click *Install Operator*.
+
+    **Kubernetes Namespace** - The Kubernetes namespace to which to install the operator.<br>
+    **Kubernetes Service Account** - The Kubernetes service account for the operator to use when making Kubernetes API requests.<br>
+    **Helm Release Name to Use for Operator Installation** - The Helm release name to use to identify this installation.<br>
+
     ![WebLogic Operatotr](images/WebLogicOperator.png) 
-    
-    > Theory
     ![Operator Image](images/OperatorImage.png)
-    > Theory
     ![Role Binding](images/RoleBinding.png)
-    > Theory
     ![Java Logging](images/JavaLogging.png)
+
+ > For more information on *WebLogic Kubernetes Operator Image*, *Kubernetes Namespace Selection Strategy*, *WebLogic Kubernetes Role Bindings*, *External REST API Access*, *Third Party Integrations* and *Java Logging*, see the [WebLogic Kubernetes Operator](https://oracle.github.io/weblogic-toolkit-ui/navigate/kubernetes/k8s-wko/) documentation.
 
 2. Once you see *WebLogic Kubernetes Operator Installation Complete*, Click *Ok*.
     ![Operator Installed](images/OperatorInstalled.png)
@@ -90,4 +103,4 @@ In this lab, you will:
 
 * **Author** -  Ankit Pandey
 * **Contributors** - Maciej Gruszka, Sid Joshi
-* **Last Updated By/Date** - Kamryn Vinson, January 2022
+* **Last Updated By/Date** - Kamryn Vinson, March 2022
