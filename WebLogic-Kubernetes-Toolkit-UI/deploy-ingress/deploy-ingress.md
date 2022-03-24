@@ -2,11 +2,11 @@
 
 ## Introduction
 
+In this lab, we install the *Traefik* Ingress Controller. Later, we updates the *Ingress Routes* to access the application and admin server.
 
+***About WebLogic Kubernetes Toolkit UI Ingress Controller section***
 
-### About Product/Technology
-
-
+This section supports two distinct functions related to an ingress controller. First, it supports installing an ingress controller to a Kubernetes cluster. Second, it supports adding the necessary routes to an ingress controller to make a deployed WebLogic domain’s endpoints accessible.
 
 ### Objectives
 
@@ -17,12 +17,10 @@ In this lab, you will:
 
 ### Prerequisites
 
+* successfully completed the Lab 1 to Lab 5.
 
 
 ## Task 1: Installtion of Ingress Controller to the Oracle Container Engine for Kubernetes (OKE) on Oracle Cloud Infrastructure (OCI)
-
-***Ingress Controller***
-This section supports two distinct functions related to an ingress controller. First, it supports installing an ingress controller to a Kubernetes cluster. Second, it supports adding the necessary routes to an ingress controller to make a deployed WebLogic domain’s endpoints accessible.
 
 In this Task, we install the *Ingress Controller*.
 

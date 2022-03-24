@@ -1,12 +1,8 @@
-# Applying the Patches to the WebLogic Server 
+# Using the Upgrade WebLogic Server Image as Primary Image 
 
 ## Introduction
 
-
-
-### About Product/Technology
-
-
+In this lab, we modify the primary image, we use WebLogic Server Image with *12.2.1.4-slim-ol8* tag. Then we re-deploy the domain using WebLogic Kubernetes Toolkit UI. At last, we verify that newly managed server pods are using the updated WebLogic Server images using WebLogic Remote Console.
 
 ### Objectives
 
@@ -17,6 +13,10 @@ In this lab, you will:
 
 ### Prerequisites
 
+* You must have an [Oracle Cloud Infrastructure](https://cloud.oracle.com/en_US/cloud-infrastructure) enabled account.
+* You must have Oracle Cloud Account. You must have information about your tenancy name and cloud account credentials.
+* Successfully created the virtual machine, which consist of all required softwares.
+* You should have a text editor, where you can paste the commands and URLs and modify them, as per your environment. Then you can copy and paste the modified commands for running them in the terminal.
 
 
 ## Task 1: Enter detail of new WebLogic Server Image as Primary Image

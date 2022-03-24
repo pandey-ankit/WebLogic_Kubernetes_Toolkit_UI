@@ -2,11 +2,25 @@
 
 ## Introduction
 
+In this lab, we access the application *opdemo* and verify the successful migration of an offline on-premise domain. we also verify the loadbalancing between managed server pods. Later, we use WebLogic Remote Console, to verify the successful deployment of resources of test-domain in kubernetes environment.
 
 
-### About Product/Technology
+### About WebLogic Remote Console
 
+The WebLogic Remote Console is a lightweight, open source console that you can use to manage your WebLogic Server domain running anywhere, such as on a physical or virtual machine, in a container, Kubernetes, or in the Oracle Cloud. The WebLogic Remote Console does not need to be colocated with the WebLogic Server domain.
 
+You can install and run the WebLogic Remote Console anywhere, and connect to your domain using WebLogic REST APIs. You simply launch the desktop application and connect to the Administration Server of your domain. Or, you can start the console server, launch the console in a browser and then connect to the Administration Server.
+
+The WebLogic Remote Console is fully supported with WebLogic Server 12.2.1.3, 12.2.1.4, and 14.1.1.0.
+
+**Key Features of the WebLogic Remote Console**
+
+* Configure WebLogic Server instances and clusters
+* Create or modify WDT metadata models
+* Configure WebLogic Server services, such as database connectivity (JDBC), and messaging (JMS)
+* Deploy and undeploy applications
+* Start and stop servers and applications
+* Monitor server and application performance
 
 ### Objectives
 
@@ -17,7 +31,7 @@ In this lab, you will:
 
 ### Prerequisites
 
-
+* Successfully created the virtual machine, which consist of all required softwares.
 
 ## Task 1: Access the Application through the Browser
 
@@ -63,4 +77,4 @@ In this task, we explore the WebLogic Remote Console. We create connection to *A
 
 * **Author** -  Ankit Pandey
 * **Contributors** - Maciej Gruszka, Sid Joshi
-* **Last Updated By/Date** - Kamryn Vinson, January 2022
+* **Last Updated By/Date** - Kamryn Vinson, March 2022

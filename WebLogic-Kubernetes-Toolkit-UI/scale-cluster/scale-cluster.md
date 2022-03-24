@@ -2,21 +2,17 @@
 
 ## Introduction
 
-
-
-### About Product/Technology
-
-
+In this lab, we scale a WebLogic Cluster. In lab 5, we specify the *2* as replicas size. here, we modify the value to *3* and re-deploy the domain.
 
 ### Objectives
 
 In this lab, you will:
 
-* Scale a WebLogic Cluster using WebLogic Kubernetes Toolkit UI
+* Scale a WebLogic Cluster using WebLogic Kubernetes Toolkit UI.
 
 ### Prerequisites
 
-
+* Successfully created the virtual machine, which consist of all required softwares.
 
 ## Task 1: Scaling a WebLogic Cluster using WebLogic Kubernetes Toolkit UI
 
@@ -45,4 +41,4 @@ In this Task, we scale the size of WebLogic Cluster from 2 to 3. You just need t
 
 * **Author** -  Ankit Pandey
 * **Contributors** - Maciej Gruszka, Sid Joshi
-* **Last Updated By/Date** - Kamryn Vinson, January 2022
+* **Last Updated By/Date** - Kamryn Vinson, March 2022

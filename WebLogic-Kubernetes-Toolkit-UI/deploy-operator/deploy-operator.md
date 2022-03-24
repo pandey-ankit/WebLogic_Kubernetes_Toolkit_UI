@@ -2,11 +2,7 @@
 
 ## Introduction
 
-
-
-### About Product/Technology
-
-
+In this lab, we authenticate OCI CLI using the browser, which will creates *.oci/config* file. As we will use kubectl to manage the cluster remotely using the *Local Access*. It needs a *kubeconfig* file. This kubeconfig file will be generated using the OCI CLI. Then we verify the connectivity to Kubernetes cluster from the WebLogic Kubernetes Toolkit UI. At last, we install the WebLogic Kubernetes Operator to Kubernetes cluster(OKE).
 
 ### Objectives
 
@@ -17,10 +13,9 @@ In this lab, you will:
 * Install the WebLogic Kubernetes Operator to Oracle Container Engine for Kubernetes (OKE) on Oracle Cloud Infrastructure (OCI). 
 
 
-
 ### Prerequisites
-
-
+* You must have Oracle Cloud Account. You must have information about your tenancy name and cloud account credentials.
+* Successfully created the virtual machine, which consist of all required softwares.
 
 ## Task 1: Configure kubectl (Kubernetes Cluster CLI) to connect to Oracle Container Engine for Kubernetes (OKE) on Oracle Cloud Infrastructure (OCI)
 
