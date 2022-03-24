@@ -144,6 +144,8 @@ In Task 1, we downloaded the artifacts which is required for creation of Virtual
 ![Generate URL](images/GenerateURL.png)
  > If you see any window, asking for password for refreshing the repository, click *Cancel*.
 
+ > For copy and paste between the host machine and remote desktop, Use the Clipboard. For example, if you want copy from the host machine and want to paste it inside the remote desktop, you need to first paste in the clipboard first, then you can paste it in remote desktop.
+
 ## Task 4: Creation of VM from MarketPlace Image
 
 
