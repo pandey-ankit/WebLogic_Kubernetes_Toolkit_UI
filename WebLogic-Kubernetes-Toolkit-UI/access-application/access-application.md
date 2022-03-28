@@ -2,9 +2,6 @@
 
 ## Introduction
 
-In this lab, we access the application *opdemo* and verify the successful migration of an offline on-premise domain. we also verify the loadbalancing between managed server pods. Later, we use WebLogic Remote Console, to verify the successful deployment of resources of test-domain in kubernetes environment.
-
-
 ### About WebLogic Remote Console
 
 The WebLogic Remote Console is a lightweight, open source console that you can use to manage your WebLogic Server domain running anywhere, such as on a physical or virtual machine, in a container, Kubernetes, or in the Oracle Cloud. The WebLogic Remote Console does not need to be colocated with the WebLogic Server domain.
@@ -22,6 +19,9 @@ The WebLogic Remote Console is fully supported with WebLogic Server 12.2.1.3, 12
 * Start and stop servers and applications
 * Monitor server and application performance
 
+In this lab, we access the application *opdemo* and verify the successful migration of an offline on-premise domain. we also verify the loadbalancing between managed server pods. Later, we use WebLogic Remote Console, to verify the successful deployment of resources of test-domain in kubernetes environment.
+
+
 ### Objectives
 
 In this lab, you will:
@@ -32,12 +32,13 @@ In this lab, you will:
 ### Prerequisites
 
 * Successfully created the virtual machine, which consist of all required softwares.
+* You should have a text editor, where you can paste the commands and URLs and modify them, as per your environment. Then you can copy and paste the modified commands for running them in the terminal.
 
 ## Task 1: Access the Application through the Browser
 
-In this task, we access the *opdemo* application. We click on refresh icon to make multiple request to Application, to verify loadbalancing between two managed servers.
+In this task, we access the *opdemo* application. We click on refresh icon to make multiple request to application, to verify loadbalancing between two managed server pods.
 
-1. Copy the below URL and replace *XX.XX.XX.XX* with your IP, which is populated in last lab. You can see the below output.
+1. Copy the below URL and replace *XX.XX.XX.XX* with your IP, which you noted down in last lab. You can see the below output.
     ```bash
     <copy>http://XX.XX.XX.XX/opdemo/?dsname=testDatasource</copy>
     ```
@@ -62,7 +63,7 @@ In this task, we explore the WebLogic Remote Console. We create connection to *A
     Connection Provider Name: Admin<br> Server<br>
     Username: weblogic<br>
     Password: welcome1<br>
-    URL:  `Copy_Public_IP_From_WKTUI`</br>
+    URL:  `Copy_IP_From_TextEditor`</br>
     ![Connection Details](images/ConnectionDetails.png)
 
 4. Click on *Edit Tree* icon, then Select *Services* -> *JDBC System Resources*. You can observe the same Datasouce, which we had seen in on-premise domain.

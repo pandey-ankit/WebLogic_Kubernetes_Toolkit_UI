@@ -2,17 +2,6 @@
 
 ## Introduction
 
-In this lab, You download the custom image from the market place. Then you will create a 3-node Kubernetes cluster configured with all of the necessary network resources. The nodes will be deployed in different availability domains to enusre high availability. We will create Virtual Cloud Network, which we will use in this lab later. Then we will create the instance using the created virtual network and downloaded custom image.
-
-### Objectives
-
-In this lab, you will:
-
-* Download the required artifacts from Marketplace.
-* Use the *Quick Create* cluster feature to create an OKE (Oracle Kubernetes Engine) instance with the required network resources, a node pool, and three worker nodes. The *Quick Create* approach is the fastest way to create a new cluster. If you accept all the default values, you can create a new cluster in just a few clicks.
-* Create Virtual Cloud Networks, Subnet, Security lists. Then you will add Ingress Rules, to open ports, so you can remotly access your Virtual Machine.
-* Create Virtual Machine from the custom image which you downloads from Marketplace using the created Virtual Cloud Network.
-
 ### About Oracle Cloud Infrastructure Container Engine for Kubernetes
 
 Oracle Cloud Infrastructure Container Engine for Kubernetes is a fully-managed, scalable, and highly available service that you can use to deploy your container applications to the cloud. Use the Container Engine for Kubernetes (sometimes abbreviated OKE) when your development team wants to reliably build, deploy, and manage cloud-native applications. You specify the compute resources that your applications require, and OKE provisions them on the Oracle Cloud Infrastructure in an existing OCI tenancy.
@@ -34,16 +23,31 @@ Oracle virtual cloud networks (VCNs) provide customizable and private cloud netw
 For more information about Virtual Cloud Network and Subnet, see the [Oracle Virtual Cloud Network](https://www.oracle.com/in/cloud/networking/virtual-cloud-network/) documentation.
 
 
+In this lab, you will create a 3-node Kubernetes cluster configured with all of the necessary network resources. Also, you will create a repository inside Oracle Cloud Container Image Registry. Then, you w generate an authentication token. Further, you will accept the license agreement for WebLogic Server images in Oracle Container Registry. At last, you will create Virtual Cloud Network and its associated resources.
+
+### Objectives
+
+In this lab, you will:
+
+* Use the *Quick Create* cluster feature to create an OKE (Oracle Kubernetes Engine) instance with the required network resources, a node pool, and three worker nodes.
+* Create a repository inside Oracle Cloud Container Image Registry.
+* Generate an authentication token.
+* Accept the license for WebLogic Server Images in Oracle Container Registry
+* Create Virtual Cloud Networks, Subnet, Security lists. Then you will add Ingress Rules, to open ports, so you can remotly access your Virtual Machine.
+
+
 ### Prerequisites
 
 * You must have an [Oracle Cloud Infrastructure](https://cloud.oracle.com/en_US/cloud-infrastructure) enabled account.
+* You must have Oracle Cloud Account. You must have information about your tenancy name and cloud account credentials.
+* You should have a text editor, where you can paste the commands, URLs and modify them, as per your environment.
 
-## Task 1: Downloading the required artifacts from MarketPlace Image
 
-
-## Task 2: Set up an Oracle Kubernetes Engine Instance on the Oracle Cloud Infrastructure
+## Task 1: Set up an Oracle Kubernetes Engine Instance on the Oracle Cloud Infrastructure
 
 The *Quick Create* feature uses the default settings to create a *quick cluster* with new network resources as required. This approach is the fastest way to create a new cluster. If you accept all the default values, you can create a new cluster in just a few clicks. New network resources for the cluster are created automatically, along with a node pool and three worker nodes.
+
+In this task, we uses the *Quick Create* features to create the Oracle Kubernetes Cluster. In Lab 5, we use this Kubernetes cluster as target cluster, where we will deploy the migrated WebLogic Domain.
 
 1. In the Console, select the *Hamburger Menu* -> *Developer Services* -> *Kubernetes Clusters (OKE)* as shown.
         ![Developer Services](images/DeveloperServices.png)
@@ -77,11 +81,11 @@ The *Quick Create* feature uses the default settings to create a *quick cluster*
       ![Network Resources](images/NetworkResources.png)
 
 
-    > Then, the new cluster is shown on the *Cluster Details* page. When the master nodes are created, the new cluster gains a status of *Active* (it takes about 7 minutes).
+    > Then, the new cluster is shown on the *Cluster Details* page. When the master nodes are created, the new cluster gains a status of *Active* (it takes about 7 minutes). Please don't wait and proceed for the next task.
 
-## Task 3: Creation of repository inside Oracle Cloud Container Registry Repository
+## Task 2: Creation of repository inside Oracle Cloud Container Registry Repository
 
-You creates a public repository in this task. Later, we will push Auxiliary Image in this repository.
+In this task, you creates a public repository. In lab 3, we will push Auxiliary Image into this repository.
 
 1. In the Console, select the *Hamburger Menu* -> *Developer Services* -> *Container Registry* as shown.
     ![Container Registry Icon](images/ContainerRegistryIcon.png)
@@ -92,14 +96,14 @@ You creates a public repository in this task. Later, we will push Auxiliary Imag
 3. Enter *`test-model`* as Repository name and Access as *Public* then click *Create repository*.
     ![Repository Details](images/RepositoryDetails.png)
 
-4. Once your repository is ready, you need to note down the tenancy namespace somewhere.
+4. Once your repository is ready. Please note down the tenancy namespace in your text editor.
     ![Note Tenancy NameSpace](images/NoteTenancyNamespace.png)
 
 
 
-## Task 4: Generate an Authentication Token to push Auxiliary Image to the Oracle Cloud Container Registry
+## Task 3: Generate an Authentication Token to push Auxiliary Image to the Oracle Cloud Container Registry
 
-In this step, we are going to generate an *Authentication Token*, that we will use to push auxiliary image into the Oracle Cloud Container Registry Repository.
+In this task, we will generate an *Authentication Token*. In lab 3, we will use this authentication token to push auxiliary image into the Oracle Cloud Container Registry Repository.
 
 1. Select the User Icon in the top right corner and then select *MyProfile*.
 
@@ -117,11 +121,13 @@ In this step, we are going to generate an *Authentication Token*, that we will u
 
     ![Create Token](images/CreateToken.png)
 
-5. Select *Copy* under Generated Token and paste it in the text editor. We cannot copy it later. You need to use this in Task 4 of this lab.  Click *Close*.
+5. Select *Copy* under Generated Token and paste it in your text editor. We cannot copy it later. Click *Close*.
 
     ![Copy Token](images/CopyToken.png)
 
-## Task 5: Accepting the license for WebLogic Server Images in Oracle Container Registry
+## Task 4: Accepting the license for WebLogic Server Images in Oracle Container Registry
+
+In this task, we accept the license agreement for WebLogic Server images resides in Oracle Container Registry. As in Lab 3, we will use WebLogic Server 12.2.1.3.0 image as our Primary Image. So, to get access to WebLogic Server Images, we accept the license agreement in this task.
 
 1. Click the link for the Oracle Container Registry [https://container-registry.oracle.com/](https://container-registry.oracle.com/) and sign in. For this, you need an Oracle Account.
     ![Container Registry Sign In](images/ContainerRegistrySignIn.png)
@@ -139,7 +145,7 @@ In this step, we are going to generate an *Authentication Token*, that we will u
 5. Click *Accept* to accept the license agreement.
     ![Accept License](images/AcceptLicense.png)
 
-## Task 6: Creation of Virtual Cloud Networks and Subnet
+## Task 5: Creation of Virtual Cloud Networks and Subnet
 
 In Task 1, we downloaded the artifacts which is required for creation of Virtual Machine. In Task 4 of this lab, we will create the Virtual machine. To Access this Virtual Machine using *noVNC*, we need to open ports 80,6080. In this task, we are going to create Virtual Cloud Network using *Start VCN Wizard*. It automatically creates Subnet and Security Lists. Once Virtual Cloud Network created, we add *Ingress Rules* in Default Security list of Public Subnet. This allows you to access Remote Desktop on your Virtual machine at port 80,6080.
 
@@ -204,8 +210,6 @@ In Task 1, we downloaded the artifacts which is required for creation of Virtual
  > If you see any window, asking for password for refreshing the repository, click *Cancel*.
 
  > For copy and paste between the host machine and remote desktop, Use the Clipboard. For example, if you want copy from the host machine and want to paste it inside the remote desktop, you need to first paste in the clipboard first, then you can paste it in remote desktop.
-
-## Task 7: Creation of VM from MarketPlace Image
 
 
 ## Acknowledgements

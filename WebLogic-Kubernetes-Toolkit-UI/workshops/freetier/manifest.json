@@ -40,11 +40,11 @@
             "filename": "../../access-application/access-application.md"
         },
         {
-            "title": "Lab 8: Scaling a WebLogic Cluster",
+            "title": "(Optional) Lab 8: Scaling a WebLogic Cluster",
             "filename": "../../scale-cluster/scale-cluster.md"
         },
         {
-            "title": "Lab 9: Making a upgrade in WebLogic Server Version ",
+            "title": "(Optional) Lab 9: Making a upgrade in WebLogic Server Version ",
             "filename": "../../upgrade-version/upgrade-version.md"
         },
       {

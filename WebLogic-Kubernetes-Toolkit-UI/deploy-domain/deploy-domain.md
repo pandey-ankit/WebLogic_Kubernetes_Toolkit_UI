@@ -21,12 +21,17 @@ In this lab, you will:
 
 The WebLogic Domain section provides support for creating and deploying the Kubernetes custom resource for the WebLogic domain as defined by the WebLogic Kubernetes Operator.
 
-1. Click *WebLogic Domain*. we used weblogic/welcome1 as *WebLogic Admin Username*/*WebLogic Admin Password*. If you want, you can change these values.
+In this task, we deploy the WebLogic Domain to Kubernetes Cluster.
+
+1. Click *WebLogic Domain*. we used *weblogic/welcome1* as `WebLogic Admin Username`/`WebLogic Admin Password`. If you want, you can change these values.
     ![Admin Credentials](images/AdminCredentials.png)
 
 
 2. Scroll down, enter the following in Primary Image section, Enter *domain-secret* as *Image Pull Secret Name*, and Use Oracle account username and password in *Image Registry Pull Username* and *Image Registry Pull Password*. Enter your Oracle email id in *Image Registry Pull Email Address*. These are the same credential which you used to accept license for *weblogic* images in Oracle Container Registry.
     ![Primary Image Details](images/PrimaryImageDetails.png)
+    > **For your information only:**<br>
+    > We are pulling the image from the Oracle Container Registry, so we are specifying the credential, which we used to accept the license agreement for WebLogic Server Images.
+
 
 3. Scroll down, enter the following in Auxiliary Image section, Enter *model-secret* as *Image Pull Secret Name*, and Use Cloud account username and password in *Image Registry Pull Username* and *Image Registry Pull Password*. Enter your Cloud email id in *Image Registry Pull Email Address*. These are the same credential which you used to push Auxiliary images in Oracle Cloud Container Image Registry.
     ![Auxiliary Image Details](images/AuxiliaryImageDetails.png)
@@ -39,6 +44,7 @@ The WebLogic Domain section provides support for creating and deploying the Kube
 
 6. In Datasources section, double click to edit *passwords* for two datasource. You can give *tiger* as password in both the datasources. Once done, click *Deploy Domain*.
     ![Datasoure Password](images/DatasourcePassword.png)
+    > This deploy WebLogic Domain test-domain to Kubernetes namespace *test-domain-ns*.
 
 7. Once you see *WebLogic Domain Deployment to Kubernetes Complete* window, Click *OK*.
     ![Deployment Complete](images/DeploymentComplete.png)

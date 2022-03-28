@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, we scale a WebLogic Cluster. In lab 5, we specify the *2* as replicas size. here, we modify the value to *3* and re-deploy the domain.
+In this lab, we scale a WebLogic Cluster. In lab 5, we specify the *2* as replicas size. Here, we modify the value to *3* and re-deploy the domain.
 
 ### Objectives
 
@@ -35,6 +35,7 @@ In this Task, we scale the size of WebLogic Cluster from 2 to 3. You just need t
     <copy>kubectl get pods -n test-domain-ns -w</copy>
     ```
     ![View Scaling](images/ViewScaling.png)
+    > You can see, re-deployment of domain, starts the introspector job, which start the process of creating pod for test-domain-managed-server3 and in sometime, this pod gets into *Running* status.
 
 
 ## Acknowledgements
