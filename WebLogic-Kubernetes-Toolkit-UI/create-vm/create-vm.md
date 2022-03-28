@@ -1,4 +1,4 @@
-# Creation of VM from Maketplace Image
+# Setup the Lab Environment
 
 ## Introduction
 
@@ -49,7 +49,7 @@ The *Quick Create* feature uses the default settings to create a *quick cluster*
         ![Developer Services](images/DeveloperServices.png)
 
 2. In the Cluster List page, select the Compartment of your choice, where you are allowed to create a cluster, and then click *Create Cluster*.
-        ![Select Compartment](images/SelectCompartment.png)
+        ![Select Compartment](images/SelectCompartmentCluster.png)
 > You need to select a compartment in which you are allowed to create a cluster and also, a repository inside the Oracle Container Registry.
 
 3. In the Create Cluster Solution dialog, select *Quick Create* and click *Launch Workflow*. `Quick Create` will create a new cluster with the default settings, along with new network resources for the new cluster.
@@ -79,8 +79,67 @@ The *Quick Create* feature uses the default settings to create a *quick cluster*
 
     > Then, the new cluster is shown on the *Cluster Details* page. When the master nodes are created, the new cluster gains a status of *Active* (it takes about 7 minutes).
 
+## Task 3: Creation of repository inside Oracle Cloud Container Registry Repository
 
-## Task 3: Creation of Virtual Cloud Networks and Subnet
+You creates a public repository in this task. Later, we will push Auxiliary Image in this repository.
+
+1. In the Console, select the *Hamburger Menu* -> *Developer Services* -> *Container Registry* as shown.
+    ![Container Registry Icon](images/ContainerRegistryIcon.png)
+
+2. Select your compartment, where you are allowed to create the repository. Click *Create Repository*.
+    ![Select Compartment](images/SelectCompartment.png)
+
+3. Enter *`test-model`* as Repository name and Access as *Public* then click *Create repository*.
+    ![Repository Details](images/RepositoryDetails.png)
+
+4. Once your repository is ready, you need to note down the tenancy namespace somewhere.
+    ![Note Tenancy NameSpace](images/NoteTenancyNamespace.png)
+
+
+
+## Task 4: Generate an Authentication Token to push Auxiliary Image to the Oracle Cloud Container Registry
+
+In this step, we are going to generate an *Authentication Token*, that we will use to push auxiliary image into the Oracle Cloud Container Registry Repository.
+
+1. Select the User Icon in the top right corner and then select *MyProfile*.
+
+    ![My Profile](images/MyProfile.png)
+
+2. Scroll down and select *Auth Tokens*.
+
+    ![Auth token](images/AuthToken.png)
+
+3. Click *Generate Token*.
+
+    ![Generate Token](images/GenerateToken.png)
+
+4. Copy *`test-model-your_first_name`* and paste it in the *Description* box and click *Generate Token*.
+
+    ![Create Token](images/CreateToken.png)
+
+5. Select *Copy* under Generated Token and paste it in the text editor. We cannot copy it later. You need to use this in Task 4 of this lab.  Click *Close*.
+
+    ![Copy Token](images/CopyToken.png)
+
+## Task 5: Accepting the license for WebLogic Server Images in Oracle Container Registry
+
+1. Click the link for the Oracle Container Registry [https://container-registry.oracle.com/](https://container-registry.oracle.com/) and sign in. For this, you need an Oracle Account.
+    ![Container Registry Sign In](images/ContainerRegistrySignIn.png)
+    
+2. Enter your *Oracle Account Credentials* in the Username and Password fields, and then click *Sign In*.
+    ![Login Container Registry](images/LoginContainerRegistry.png)
+
+3. In the Home page of Oracle Container Registry, Search for *weblogic*.
+    ![Search WebLogic](images/SearchWebLogic.png)
+
+4. Click *weblogic* as shown and select *English* as the language, then click *Continue*.
+    ![Click WebLogic](images/ClickWebLogic.png)
+    ![Select Language](images/SelectLanguage.png)
+
+5. Click *Accept* to accept the license agreement.
+    ![Accept License](images/AcceptLicense.png)
+
+## Task 6: Creation of Virtual Cloud Networks and Subnet
 
 In Task 1, we downloaded the artifacts which is required for creation of Virtual Machine. In Task 4 of this lab, we will create the Virtual machine. To Access this Virtual Machine using *noVNC*, we need to open ports 80,6080. In this task, we are going to create Virtual Cloud Network using *Start VCN Wizard*. It automatically creates Subnet and Security Lists. Once Virtual Cloud Network created, we add *Ingress Rules* in Default Security list of Public Subnet. This allows you to access Remote Desktop on your Virtual machine at port 80,6080.
 
@@ -146,7 +205,7 @@ In Task 1, we downloaded the artifacts which is required for creation of Virtual
 
  > For copy and paste between the host machine and remote desktop, Use the Clipboard. For example, if you want copy from the host machine and want to paste it inside the remote desktop, you need to first paste in the clipboard first, then you can paste it in remote desktop.
 
-## Task 4: Creation of VM from MarketPlace Image
+## Task 7: Creation of VM from MarketPlace Image
 
 
 ## Acknowledgements

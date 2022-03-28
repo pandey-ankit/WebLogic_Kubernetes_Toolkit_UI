@@ -31,67 +31,13 @@ In this lab, you will:
 * Successfully created the virtual machine, which consist of all required softwares.
 * You should have a text editor, where you can paste the commands and URLs and modify them, as per your environment. Then you can copy and paste the modified commands for running them in the terminal.
 
-## Task 1: Creation of repository inside Oracle Cloud Container Registry Repository
 
-You creates a public repository in this task. Later, we will push Auxiliary Image in this repository.
 
-1. In the Console, select the *Hamburger Menu* -> *Developer Services* -> *Container Registry* as shown.
-    ![Container Registry Icon](images/ContainerRegistryIcon.png)
-
-2. Select your compartment, where you are allowed to create the repository. Click *Create Repository*.
-    ![Select Compartment](images/SelectCompartment.png)
-
-3. Enter *`test-model-your_first_name`* as Repository name and Access as *Public* then click *Create repository*.
-    ![Repository Details](images/RepositoryDetails.png)
-
-4. Once your repository is ready, you need to note down the tenancy namespace somewhere.
-    ![Note Tenancy NameSpace](images/NoteTenancyNamespace.png)
-
-## Task 2: Generate an Authentication Token to push Auxiliary Image to the Oracle Cloud Container Registry
-
-In this step, we are going to generate an *Authentication Token*, that we will use to push auxiliary image into the Oracle Cloud Container Registry Repository.
-
-1. Select the User Icon in the top right corner and then select *MyProfile*.
-
-    ![My Profile](images/MyProfile.png)
-
-2. Scroll down and select *Auth Tokens*.
-
-    ![Auth token](images/AuthToken.png)
-
-3. Click *Generate Token*.
-
-    ![Generate Token](images/GenerateToken.png)
-
-4. Copy *`test-model-your_first_name`* and paste it in the *Description* box and click *Generate Token*.
-
-    ![Create Token](images/CreateToken.png)
-
-5. Select *Copy* under Generated Token and paste it in the text editor. We cannot copy it later. You need to use this in Task 4 of this lab.  Click *Close*.
-
-    ![Copy Token](images/CopyToken.png)
-
-## Task 3: Enter details of Primary Container Image 
+## Task 1: Enter details of Primary Container Image 
 
 In this Task, we are using the pre-build WebLogic Server Images. To use that images, we need to accept the license agreement. First, we accept the license agreement for WebLogic Server Images, later we use the WebLogic Server Image Tag as *Primary Image* in the WebLogic Kubernetes Toolkit UI.
 
-1. Click the link for the Oracle Container Registry [https://container-registry.oracle.com/](https://container-registry.oracle.com/) and sign in. For this, you need an Oracle Account.
-    ![Container Registry Sign In](images/ContainerRegistrySignIn.png)
-    
-2. Enter your *Oracle Account Credentials* in the Username and Password fields, and then click *Sign In*.
-    ![Login Container Registry](images/LoginContainerRegistry.png)
-
-3. In the Home page of Oracle Container Registry, Search for *weblogic*.
-    ![Search WebLogic](images/SearchWebLogic.png)
-
-4. Click *weblogic* as shown and select *English* as the language, then click *Continue*.
-    ![Click WebLogic](images/ClickWebLogic.png)
-    ![Select Language](images/SelectLanguage.png)
-
-5. Click *Accept* to accept the license agreement.
-    ![Accept License](images/AcceptLicense.png)
-
-6. Click *Image*.We already pre-filled *Image Tag* with the below value. As you enter the *Image Tag*, It also populates the *Image Registry Address*.
+1. Click *Image*.We already pre-filled *Image Tag* with the below value. As you enter the *Image Tag*, It also populates the *Image Registry Address*.
 
     ````bash
     <copy>container-registry.oracle.com/middleware/weblogic:12.2.1.3-ol8</copy>
@@ -100,7 +46,7 @@ In this Task, we are using the pre-build WebLogic Server Images. To use that ima
     ![Primary Image](images/PrimaryImage.png)
 
 
-## Task 4: Prepare Auxiliary Image and Push the Auxiliary Image to Oracle Container Image Registry 
+## Task 2: Prepare Auxiliary Image and Push the Auxiliary Image to Oracle Container Image Registry 
 
 In this task, We are creating an Auxiliary image, which we will push to the Oracle Cloud Container Registry.
 
@@ -118,14 +64,14 @@ In this task, We are creating an Auxiliary image, which we will push to the Orac
 3. In Task 1 of this lab, You already noted the tenancy namespace. If not, then for finding the Namespace of the tenancy, select the *Hamburger Menu* -> *Developer Services* -> *Container Registry*, as shown. In the compartment, you will find the Namespace.
     ![Tenancy Namespace](images/TenancyNamespace.png)
 
-4. Now you have both the Tenancy Namespace and Endpoint for your region. Copy the following command and paste it in your text editor. Then replace the `END_POINT_OF_YOUR_REGION` with the endpoint of your region name, `NAMESPACE_OF_YOUR_TENANCY` with your tenancy's namespace and `your_first_name` with your first name in lower case. Click on *Auxiliary Image* tab as shown.
+4. Now you have both the Tenancy Namespace and Endpoint for your region. Copy the following command and paste it in your text editor. Then replace the `END_POINT_OF_YOUR_REGION` with the endpoint of your region name, `NAMESPACE_OF_YOUR_TENANCY` with your tenancy's namespace. Click on *Auxiliary Image* tab as shown.
     ![Auxiliary Tab](images/AuxiliaryTab.png)
 
     ````bash
-    <copy>END_POINT_OF_YOUR_REGION/NAMESPACE_OF_YOUR_TENANCY/test-domain-your_first_name:v1</copy>
+    <copy>END_POINT_OF_YOUR_REGION/NAMESPACE_OF_YOUR_TENANCY/test-model:v1</copy>
     ````
 
-> For example, in my case Auxiliary Image tag is `lhr.ocir.io/tenancynamespace/test-domain-ankit:v1`.
+> For example, in my case Auxiliary Image tag is `lhr.ocir.io/tenancynamespace/test-model:v1`.
 
 5. In the previous step, you also determined the tenancy namespace.
 Enter the  Auxiliary Image Registry Push Username as follows: `NAMESPACE_OF_YOUR_TENANCY`/`YOUR_ORACLE_CLOUD_USERNAME`. <br>

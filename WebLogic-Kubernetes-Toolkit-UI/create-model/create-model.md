@@ -167,6 +167,7 @@ In this task, we open a pre created  *`base_project.wktproj`* project. We see th
 
 3. Click *Downloads* in left side, then choose *base_project.wktproj* and click *Open Project*.
     ![Project Location](images/ProjectLocation.png)
+    > For your information only:
     > As *Credential Story Policy*, we select **Store in Native OS Credentials Store**. It means the credentials (like for WebLogic Server and datasources) are only stored on the local machine.<br>
     > For *Where would you like the target Oracle Fusion Middleware domain to live?*, we select **Created in the container from the model in the image**. In this case, the set of model-related files are added to the image. So when the WebLogic Kubernetes Operator domain object is deployed, its inspector process runs and creates the WebLogic Server domain inside a running container on-the-fly.
 
