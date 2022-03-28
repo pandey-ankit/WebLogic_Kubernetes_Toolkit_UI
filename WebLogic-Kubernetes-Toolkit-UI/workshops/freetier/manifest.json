@@ -12,7 +12,7 @@
             "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/cloud-login/pre-register-free-tier-account.md"
         },
         {
-            "title": "Lab 1: Creation of VM From Marketplace Image",
+            "title": "Lab 1: Set up the Lab Environment",
             "filename": "../../create-vm/create-vm.md"
         },
         {

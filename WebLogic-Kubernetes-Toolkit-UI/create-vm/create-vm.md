@@ -109,19 +109,15 @@ In this task, we will generate an *Authentication Token*. In lab 3, we will use 
 
     ![My Profile](images/MyProfile.png)
 
-2. Scroll down and select *Auth Tokens*.
+2. Scroll down and select *Auth Tokens* and then click *Generate Token*.
 
     ![Auth token](images/AuthToken.png)
 
-3. Click *Generate Token*.
-
-    ![Generate Token](images/GenerateToken.png)
-
-4. Copy *`test-model-your_first_name`* and paste it in the *Description* box and click *Generate Token*.
+3. Copy *`test-model-your_first_name`* and paste it in the *Description* box and click *Generate Token*.
 
     ![Create Token](images/CreateToken.png)
 
-5. Select *Copy* under Generated Token and paste it in your text editor. We cannot copy it later. Click *Close*.
+4. Select *Copy* under Generated Token and paste it in your text editor. We cannot copy it later. Click *Close*.
 
     ![Copy Token](images/CopyToken.png)
 
