@@ -1,6 +1,11 @@
 # Creation of Images for the Oracle Container Engine for Kubernetes (OKE) on Oracle Cloud Infrastructure (OCI)
 ## Introduction
 
+**Primary Image** - The image containing the Oracle Fusion Middleware software. It is used as the basis of all containers that run WebLogic Servers for the domain.
+
+**Auxiliary Image** - The image that supplies the WebLogic Deploy Tooling software and the model files. At runtime, the auxiliary image’s content is merged with the primary image’s content.
+    ![Image Structure](images/ImageStructure.png)
+
 In this Lab, We specify WebLogic server 12.2.1.3.0-ol8 image as Primary Image. Also, we create an auxiliary image, and push it to Oracle Container Image Registry repository using the generated authentication token. 
 
 ### Objectives
@@ -23,26 +28,19 @@ In this lab, you will:
 ## Task 1: Enter details of Primary Container Image 
 
 
-The *Image* section helps you build container images for deploying WebLogic-based applications in a Kubernetes environment using the [WebLogic Image Tool](https://oracle.github.io/weblogic-image-tool/).
-
-**Primary Image** - The image containing the Oracle Fusion Middleware software. It is used as the basis of all containers that run WebLogic Servers for the domain.
-
 In lab 1, we accepted the license agreement for WebLogic Server Images. In this task, we use WebLogic Server 12.2.1.3.0-ol8 image as Primary Image.
 
-1. Click *Image*.We already pre-filled *Image Tag* with the below value. As you enter the *Image Tag*, It also populates the *Image Registry Address*.
+1. Click *Image*. We already preset *Image Tag* with the below value. 
 
     ```bash
     <copy>container-registry.oracle.com/middleware/weblogic:12.2.1.3-ol8</copy>
     ```
     ![Primary Image](images/PrimaryImage.png)
-    > **For your Information Only:**<br>
+    > **For your information only:**<br>
     > The primary image is the one used for running the domain. One primary image can be reused for hundreds of domains. The primary image contains the OS, JDK, and FMW software installations.
 
 
 ## Task 2: Prepare Auxiliary Image and Push the Auxiliary Image to Oracle Container Image Registry 
-
-**Auxiliary Image** - The image that supplies the WebLogic Deploy Tooling software and the model files. At runtime, the auxiliary image’s content is merged with the primary image’s content.
-    ![Image Structure](images/ImageStructure.png)
 
 In this task, We are creating an Auxiliary image, which we will push to the Oracle Cloud Container Registry.
 
@@ -54,7 +52,7 @@ In this task, We are creating an Auxiliary image, which we will push to the Orac
     You can find out your *Region Name* in top right corner in the Oracle Cloud Console.
     ![Region Name](images/RegionName.png)
 
-2. To find out the endpoint for your Region, select this URL [https://docs.oracle.com/en-us/iaas/Content/Registry/Concepts/registryprerequisites.htm#Availab](https://docs.oracle.com/en-us/iaas/Content/Registry/Concepts/registryprerequisites.htm#Availab). In my case, it is *UK South (London)* as the region name, thus its endpoint is *lhr.ocir.io*. Find out your endpoint for your own *Region Name* and save it in your text editor. We will also need it for lab 5.
+2. To find out the endpoint for your Region, select this URL [https://docs.oracle.com/en-us/iaas/Content/Registry/Concepts/registryprerequisites.htm#Availab](https://docs.oracle.com/en-us/iaas/Content/Registry/Concepts/registryprerequisites.htm#Availab). In my case, it is *UK South (London)* as the region name, thus its endpoint is *lhr.ocir.io*. Find out your endpoint for your own *Region Name* and save it in your text editor.
     ![Region Endpoints](images/RegionEndpoints.png)
 
 3. In lab 1, you already noted the tenancy namespace in your text editor. If not, then for finding the Namespace of the tenancy, select the *Hamburger Menu* -> *Developer Services* -> *Container Registry*, as shown. Select your own compartment, you will find the Namespace as shown.
@@ -73,6 +71,7 @@ In this task, We are creating an Auxiliary image, which we will push to the Orac
 Enter the  Auxiliary Image Registry Push Username as follows: `NAMESPACE_OF_YOUR_TENANCY`/`YOUR_ORACLE_CLOUD_USERNAME`. <br>
 * Replace `NAMESPACE_OF_YOUR_TENANCY` with your tenancy's namespace
 * Replace `YOUR_ORACLE_CLOUD_USERNAME` with your Oracle Cloud Account user name and then copy the replaced username from your text editor and paste it in the *Auxiliary Image Registry Push Username*.
+> For example, in my case Auxiliary Image Registry Push Username is `tenancynamespace/lab.user@oracle.com`.
 * For Password, copy and paste the Authentication Token from your text editor(or wherever you saved it) and paste it in the *Auxiliary Image Registry Push Username*.
     ![Auxiliary Image Details](images/AuxiliaryImageDetails.png)
 
@@ -87,7 +86,7 @@ Enter the  Auxiliary Image Registry Push Username as follows: `NAMESPACE_OF_YOUR
 
 9. Once Auxiliary images is successfully created, On *Create Auxiliary Image Complete* window, click *Ok*.
     ![Auxiliary Created](images/AuxiliaryCreated.png)
-    > **For your Information Only:**<br>
+    > **For your information only:**<br>
     >  An auxiliary image is domain-specific. The auxiliary image contains the data that defines the domain.
 
 10. Click *Push Auxiliary Image* to push the image in repository inside your Oracle Cloud Container Image Registry.

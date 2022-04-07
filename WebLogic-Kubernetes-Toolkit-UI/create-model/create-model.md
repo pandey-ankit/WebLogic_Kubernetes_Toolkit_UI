@@ -21,9 +21,7 @@ To run Lab 2, you must have:
 
 ## Task 1: Start the Admin Server and verify the resources in existing on-premise domain
 
-This Virtual Machine, contains WebLogic Domain *test-domain* with WebLogic Server version *12.2.1.3.0*. This *test-domain* have one application *opdemo* deployed, two datasources and one dynamic cluster. 
-
-In this Task, we start the Admin Server in this *test-domain*, and navigate through the resources using WebLogic Administration console.
+In this task, we start the Admin Server in on-premise *test-domain*, and navigate through the resources using WebLogic Administration console.
 
 1. On left side, click *Arrow Icon* -> *Setting Icon* and then select *Remote Resizing* as shown below.
     ![Remote Resizing](images/RemoteResizing.png)
@@ -72,9 +70,7 @@ In this Task, we start the Admin Server in this *test-domain*, and navigate thro
 
 ## Task 2: Opening the base WKT UI Project
 
-This Virtual Machine have *WebLogic Server*, *docker*, *helm*, *kubectl*, *JDK* installed. So we created a WKT Project *`base_project.wktproj`* for you, which already specified the installation directory for these softwares. You don't need to fill those values. 
-
-In this task, we open a pre created  *`base_project.wktproj`* project. We see the different settings in *Project Settings* section.
+For simplicity of lab, we created *`base_project.wktproj`*, which preset the location of docker, Java and Oracle Home. In this task, we open  *`base_project.wktproj`* project.
 
 1. Click *Activities* and then select the icon for *WebLogic Kubernetes Toolkit UI*.
     ![Open WKTUI](images/OpenWKTUI.png)
@@ -98,9 +94,7 @@ In this task, we open a pre created  *`base_project.wktproj`* project. We see th
 
 ## Task 3: Introspection of an Offline on-premise domain 
 
-In this task, we will use *File* -> *Add Model* menu to create a model of an existing *test-domain* using the `WebLogic Deploy Tooling's` [Discover Domain Tool](https://oracle.github.io/weblogic-deploy-tooling/userguide/tools/discover/). This *Model* section allows you to introspect a domain configuration.
-
-For more information on *Model* section, see the *Introduction* section of this lab.
+In this task, we perform introspection of an on-premise domain, which creates a model file consist of domain configuration.
 
 1. In WebLogic Kubernetes Toolkit UI, Click *Model*.
     ![Model](images/Model.png)
@@ -127,7 +121,7 @@ In this task, we validate the model and prepare the model to be deployed on Orac
 
 1. To Validate the model, click *Validate Model*.
     ![Validate Model](images/ValidateModel.png)
-    > **For your Information Only:**<br>
+    > **For your information only:**<br>
     > Validate model invokes the WDT [Validate Model Tool](https://oracle.github.io/weblogic-deploy-tooling/userguide/tools/validate/), which validates that the model and its related artifacts  are well-formed and provides help on the valid attributes and subfolder for a particular model location.
 
 2. Once you see *Validate Model Complete* window, click *Ok*.
@@ -135,7 +129,7 @@ In this task, we validate the model and prepare the model to be deployed on Orac
 
 3. To prepare the model, to be deployed on Kubernetes cluster, click *Prepare Model*
     ![Prepare Model](images/PrepareModel.png)
-    > **For your Information Only:**<br>
+    > **For your information only:**<br>
     > Prepare model invokes the WDT [Prepare Model Tool](https://oracle.github.io/weblogic-deploy-tooling/userguide/tools/prepare/) to modify the model to work in a Kubernetes cluster with WebLogic Kubernetes Operator or Verrazzano installed.<br>
     > Prepare Model does the following:
     * Removes model sections and fields that are not compatible with the target environment.

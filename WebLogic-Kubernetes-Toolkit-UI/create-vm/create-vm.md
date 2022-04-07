@@ -123,7 +123,7 @@ In this task, we will generate an *Authentication Token*. In lab 3, we will use 
 
 ## Task 4: Accepting the license for WebLogic Server Images in Oracle Container Registry
 
-In this task, we accept the license agreement for WebLogic Server images resides in Oracle Container Registry. As in Lab 3, we will use WebLogic Server 12.2.1.3.0 image as our Primary Image. So, to get access to WebLogic Server Images, we accept the license agreement in this task.
+In this task, we accept the license agreement for WebLogic Server images resides in Oracle Container Registry. As in Lab 3, we will use WebLogic Server 12.2.1.3.0 image as our Primary Image. So, to get access to WebLogic Server Images, we accept the license agreement.
 
 1. Click the link for the Oracle Container Registry [https://container-registry.oracle.com/](https://container-registry.oracle.com/) and sign in. For this, you need an Oracle Account.
     ![Container Registry Sign In](images/ContainerRegistrySignIn.png)
@@ -141,71 +141,6 @@ In this task, we accept the license agreement for WebLogic Server images resides
 5. Click *Accept* to accept the license agreement.
     ![Accept License](images/AcceptLicense.png)
 
-## Task 5: Creation of Virtual Cloud Networks and Subnet
-
-In Task 1, we downloaded the artifacts which is required for creation of Virtual Machine. In Task 4 of this lab, we will create the Virtual machine. To Access this Virtual Machine using *noVNC*, we need to open ports 80,6080. In this task, we are going to create Virtual Cloud Network using *Start VCN Wizard*. It automatically creates Subnet and Security Lists. Once Virtual Cloud Network created, we add *Ingress Rules* in Default Security list of Public Subnet. This allows you to access Remote Desktop on your Virtual machine at port 80,6080.
-
-1. In the Console, select the *Hamburger Menu* -> *Networking* -> *Virtual Cloud Networks* as shown.
-        ![Virtual Cloud Networks](images/VirtualCloudNetworks.png)
-
-2. Choose your own *Compartment*, then click *Start VCN Wizard*.
-        ![Start VCN Wizard](images/StartVCNWizard.png)
-
-3. Select *Create VCN with Internet Connectivity* and then click *Start VCN Wizard*.
-        ![Create VCN](images/CreateVCN.png)
- > This creates a VCN with a public subnet that can be reached from the internet. It also creates a private subnet that can connect to the internet through a NAT gateway, and also privately connect to the Oracle Services Network.
-
-4. Enter *WKTUI-VCN* as `VCN Name` and then click *Next*.
-        ![VCN Details](images/VCNDetails.png)
-
-5. On Review page, click *Create*.
-        ![Review VCN](images/ReviewVCN.png)
- > It creates the Virtual Cloud Network, Public Subnet, Private Subnet, Internet gateway (IG), NAT gateway (NAT), Service gateway (SG).
-
-6. Once you see message "Virtual Cloud Network creation complete" then click *View Virtual Cloud Network*.
-        ![View VCN](images/ViewVCN.png)
-
-7. Click on Public Subnet *Public Subnet WKTUI-VCN*.
-        ![Public Subnet](images/PublicSubnet.png)
-
-8. On Security Lists Page, click *Default Security List for WKTUI-VCN*.
-        ![Security Lists](images/SecurityLists.png)
-
-9. Click *Add Ingress Rule*.
-        ![Add Ingress Rules](images/AddIngressRules.png)
-
-10. Enter *0.0.0.0/0* as `Source CIDR` and *80,6080* as `Destination Port Range`, then click *Add Ingress Rules*.
-        ![Ingress Rules Details](images/IngressRulesDetails.png)
- > This enables you to access the Virtual Machine remotely on port 80,6080.
-
-11. Select the *Hamburger Menu* -> *Compute* -> *Custom Images*.
-        ![Custom Images](images/CustomImages.png)
-
-12. Click on `Three dots` in the custom image section and click *Create Instance* as shown below.
-        ![Create Instance](images/CreateInstance.png)
-
-13. Enter *instance-WKTUI* as Name and Select the VCN, subnet you just created.
-        ![Instance Details 1](images/InstanceDetails1.png)
-        ![Instance Details 2](images/InstanceDetails2.png)
-
-14. Select *Generate a key pair for me*, and save the private key and public key. Click *Create*.
-        ![Generate Key Pair](images/GenerateKeyPair.png)
-
-     > You can view the instance in provisioning state.
-     ![Provisioning Instances](images/ProvisioningInstance.png)
-
-15. Once you see instance in *RUNNING* state, then click on *Copy* to copy your instance *Public IP* and paste it in your text editor.
-        ![Copy Public IP](images/CopyPublicIP.png)
-
-16. Copy the below URL and replace *XX.XX.XX.XX* with your public ip.
-
-````bash
-<copy>http://XX.XX.XX.XX:6080/vnc.html?password=LiveLabs.Rocks_99&resize=scale&quality=9&autoconnect=true&reconnect=true</copy>
-````
-![Generate URL](images/GenerateURL.png)
- > If you see any window, asking for password for refreshing the repository, click *Cancel*.
-
- > For copy and paste between the host machine and remote desktop, Use the Clipboard. For example, if you want copy from the host machine and want to paste it inside the remote desktop, you need to first paste in the clipboard first, then you can paste it in remote desktop.
 
 
 ## Acknowledgements

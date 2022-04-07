@@ -21,8 +21,6 @@ In this lab, you will:
 
 In this Task, we creats the configuration file *.oci/config* and *.kube/config* in */home/opc* directory. This configuration file allow us to access Oracle Kubernetes Cluster (OKE) from this virtual machine.
 
-For more information on Client Configuration, see [Client Configuration](https://oracle.github.io/weblogic-toolkit-ui/navigate/kubernetes/k8s-client-config/).
-
 1. In the Console, select the *Hamburger Menu* -> *Developer Services* -> *Kubernetes Clusters (OKE)* as shown.
     ![OKE Icon](images/OKEIcon.png)
 
@@ -83,7 +81,7 @@ This section provides support for installing the WebLogic Kubernetes Operator (t
 
     ![WebLogic Operatotr](images/WebLogicOperator.png) 
     
-    > **For your Information Only:**<br>
+    > **For your information only:**<br>
     > !By default, the operator’s *Image Tag to Use* field is set to the image tag corresponding to the latest operator release version on the GitHub Container Registry.<br>
     > The operator needs to know which WebLogic domains in the Kubernetes cluster that it will manage. It does this at the Kubernetes namespace level, so any WebLogic domain in a Kubernetes namespace the operator is configured to manage, will be managed by the operator instance being installed.<br>
     > For *Kubernetes Namespace Selection Strategy* field, we select *Label Selector*, which means any Kubernetes namespace with a *weblogic-operator=enabled* label will be managed by this operator.<br>

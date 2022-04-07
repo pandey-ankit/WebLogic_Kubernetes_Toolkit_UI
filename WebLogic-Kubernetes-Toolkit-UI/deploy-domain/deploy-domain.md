@@ -19,9 +19,7 @@ In this lab, you will:
 
 ## Task 1: Deploy the WebLogic Domain to the Oracle Container Engine for Kubernetes (OKE) on Oracle Cloud Infrastructure (OCI)
 
-The WebLogic Domain section provides support for creating and deploying the Kubernetes custom resource for the WebLogic domain as defined by the WebLogic Kubernetes Operator.
-
-In this task, we deploy the WebLogic Domain to Kubernetes Cluster.
+In this task, we deploy the Kubernetes custom resource for the WebLogic domain to Kubernetes Cluster.
 
 1. Click *WebLogic Domain*. we used *weblogic/welcome1* as `WebLogic Admin Username`/`WebLogic Admin Password`. If you want, you can change these values.
     ![Admin Credentials](images/AdminCredentials.png)
