@@ -21,50 +21,35 @@ To run Lab 2, you must have:
 
 In this task, we start the Admin Server in on-premise *test-domain*, and navigate through the resources using WebLogic Administration console.
 
-1. On left side, click *Arrow Icon* -> *Setting Icon* and then select *Remote Resizing* as shown below.
-    ![Remote Resizing](images/RemoteResizing.png)
- > Again click on *Arrow Icon* to hide the *Settings* option. You can see the *Clipboard*, for copy and paste between the host machine and remote desktop, we use the *Clipboard*. For example, if you want copy from the host machine and want to paste it inside the remote desktop, you need to first paste in the clipboard first, then you can paste it in remote desktop.
+1. On left side, click *Arrow Icon*. 
+    ![Clipboard](images/clipboard.png)
+ > **Important**- Again click on *Arrow Icon* to hide the *Settings* option. You can see the *Clipboard*, for copy and paste between the host machine and remote desktop, we use the *Clipboard*. For example, if you want to copy from the host machine and want to paste it inside the remote desktop, you need to first paste in the clipboard first, then you can paste it in remote desktop.
 
 2. To open the terminal, click *Activities* -> *Terminal icon*.
-    ![Open Terminal](images/OpenTerminal.png)
+    ![Open Terminal](images/openterminal.png)
  
 3. To start the Admin Server in *test-domain*, copy the following commands and paste it in terminal.
     ````bash
-    <copy>cd ~/Oracle/Middleware/Oracle_Home/user_projects/domains/test_domain/bin/
-    ./startWebLogic.sh</copy>
+    <copy>./startSetup.sh</copy>
     ````
-    > This *~/Oracle/Middleware/Oracle_Home/user_projects/domains/test_domain/* is your domain home directory. 
+    ![Start Setup](images/startsetup.png)
 
-    ![Start WebLogic](images/StartWebLogic.png)
-    ![Running WebLogic](images/RunningWebLogic.png)
+    > **Important**<br>
+    > This start Admin Server in on-premise WebLogic Domain and open the workshop document on left side of remote desktop and Admin Console on right side of remote desktop. 
 
-4. To open Chrome Browser, click *Activities* -> *Chrome Icon*.
-    ![Open Chrome](images/OpenChrome.png)
+    ![Workshop Document](images/workshopdocument.png)
+  
+4. Enter *weblogic/Welcome1%* as `Username/Password`, then click *Login*. You can see, we have WebLogic Server version *12.2.1.3.0*.   
+    ![Login Admin Console](images/loginadminconsole.png)
 
-5. During the whole workshop, whenever you see this window, enter *welcome1* as password and click *Unlock*.   
-    ![Default Keyring](images/DefaultKeyring.png)
+5. To view available servers, expand *Environment* and click *Servers*. You can see, we have one dynamic clusters with 5 managed servers. 
+    ![View Servers](images/viewservers.png)
 
-6. Click bookmark for *Oracle WebLogic Server Administrative Console*.
-    ![Open Admin Console](images/OpenAdminConsole.png)
-    
-7. Enter *weblogic/Welcome1%* as `Username/Password`, then click *Login*. You can see, we have WebLogic Server version *12.2.1.3.0*.   
-    ![Login Admin Console](images/LoginAdminConsole.png)
+6. To view the datasources, expand *Services* and click *Data Sources*.
+    ![View Datasources](images/viewdatasources.png)
 
-8. To view available servers, expand *Environment* and click *Servers*. You can see, we have one dynamic clusters with 5 managed servers. 
-    ![View Servers](images/ViewServers.png)
-
-9. To view the datasources, expand *Services* and click *Data Sources*.
-    ![View Datasources](images/ViewDatasources.png)
-
-10. To view the deployed application, click *Deployment*. You can see, we have *opdemo* as deployed application.
-    ![View Deployments](images/ViewDeployments.png)
-
-11. To shutdown the Admin Server, go back to terminal. Click *Activities* and select the *Terminal* window.
-    ![Admin Terminal](images/AdminTerminal.png)
-
-12. Press *`Ctrl + C`* to shutdown the Admin Server.
-    ![Shutdown Admin](images/ShutdownAdmin.png)
-
+7. To view the deployed application, click *Deployment*. You can see, we have *opdemo* as deployed application.
+    ![View Deployments](images/viewdeployments.png)
 
 ## Task 2: Opening the base WKT UI Project
 

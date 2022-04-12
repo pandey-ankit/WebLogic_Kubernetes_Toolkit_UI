@@ -53,11 +53,11 @@ In this task, we access the *opdemo* application. We click on refresh icon to ma
 
 In this task, we explore the WebLogic Remote Console. We create connection to *Admin Server* in Remote Console and verify the resources in WebLogic Domain. This verifies the successful migration of an on-premise domain into the Oracle Kubernetes Cluster. 
 
-1. Go back to WebLogic Remote Console, Click on *Activities*, then select the *WebLogic Remote Console* Icon.
-    ![Open Remote Console](images/OpenRemoteConsole.png)
+1. To open WebLogic Remote Console, Click on *Activities*, then select the *WebLogic Remote Console* Icon.
+    ![Open Remote Console](images/openremoteconsole.png)
 
-2. Select *Add Admin Server Connection Provider* and click *Choose*.
-    ![Admin Server Connection](images/AdminServerConnection.png)
+2. Click on `Three dots` under *Kiosk* and Select *Add Admin Server Connection Provider* and click *Choose*.
+    ![Admin Server Connection](images/adminserverconnection.png)
 
 3. Enter the following data and click *OK*.<br>
     Connection Provider Name: Admin<br> Server<br>
