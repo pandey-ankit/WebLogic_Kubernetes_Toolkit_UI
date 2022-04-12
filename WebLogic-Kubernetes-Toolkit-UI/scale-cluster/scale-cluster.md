@@ -8,7 +8,7 @@ In this lab, we scale a WebLogic Cluster. Here, we modify the value to *3* and r
 
 In this lab, you will:
 
-* Scale a WebLogic Cluster using WebLogic Kubernetes Toolkit UI.
+* Scale a WebLogic Cluster.
 
 ### Prerequisites
 

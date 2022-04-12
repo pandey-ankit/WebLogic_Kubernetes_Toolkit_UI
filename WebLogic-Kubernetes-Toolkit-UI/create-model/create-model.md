@@ -7,10 +7,10 @@ In this lab, we explore the on-premise WebLogic domain. We navigate through the 
 
 In this lab, you will:
 
-* Explore the on-premise WebLogic domain *test-domain* and view its deployed application, servers and datasources.
-* Open the base WKT project, which contains some pre-filled values.
-* Introspection of an offline on-premise domain using WebLogic Kubernetes Toolkit UI Application.
-* Validate and prepare model to be deployed on Oracle Kubernetes Cluster (OKE). 
+* Explore the on-premise WebLogic domain *test-domain*.
+* Open the base WKT project.
+* Introspection of an offline on-premise domain.
+* Validate and prepare model. 
 
 ### Prerequisites
 

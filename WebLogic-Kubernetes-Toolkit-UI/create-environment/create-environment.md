@@ -29,12 +29,10 @@ In this lab, you will create a 3-node Kubernetes cluster configured with all of 
 
 In this lab, you will:
 
-* Use the *Quick Create* cluster feature to create an OKE (Oracle Kubernetes Engine) instance with the required network resources, a node pool, and three worker nodes.
+* Create an OKE (Oracle Kubernetes Engine) instance with the required network resources, a node pool, and three worker nodes.
 * Create a repository inside Oracle Cloud Container Image Registry.
 * Generate an authentication token.
-* Accept the license for WebLogic Server Images in Oracle Container Registry
-* Create Virtual Cloud Networks, Subnet, Security lists. Then you will add Ingress Rules, to open ports, so you can remotly access your Virtual Machine.
-
+* Accept the license for WebLogic Server Images in Oracle Container Registry.
 
 ### Prerequisites
 

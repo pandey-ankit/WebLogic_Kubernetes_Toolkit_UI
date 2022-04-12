@@ -8,7 +8,7 @@ In this lab, we deploy the WebLogic Domain to kubernetes cluster. In primary ima
 
 In this lab, you will:
 
-* Deploy the WebLogic Domain to the Oracle Container Engine for Kubernetes (OKE) on Oracle Cloud Infrastructure (OCI).
+* Deploy the WebLogic Domain to Kubernetes Cluster.
 
 ### Prerequisites
 

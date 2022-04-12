@@ -26,8 +26,8 @@ In this lab, we access the application *opdemo* and verify the successful migrat
 
 In this lab, you will:
 
-* Access the Application through the Browser and verify the load balancing between two managed server pods.
-* Connect to Admin Server using WebLogic Remote Console and explore the WewbLogic Domain and its resources.
+* Access the Application through the Browser.
+* Explore the WebLogic Domain using WebLogic Remote Console.
 
 ### Prerequisites
 

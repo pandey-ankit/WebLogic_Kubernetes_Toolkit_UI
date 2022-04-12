@@ -8,9 +8,9 @@ In this lab, we authenticate OCI CLI using the browser, which will creates *.oci
 
 In this lab, you will:
 
-* Configure kubectl (Kubernetes Cluster CLI) to connect to Oracle Container Engine for Kubernetes (OKE) on Oracle Cloud Infrastructure (OCI).
-* Verify Connectivity of WebLogic Kubernetes Toolkit UI to Oracle Container Engine for Kubernetes (OKE) on Oracle Cloud Infrastructure (OCI).
-* Install the WebLogic Kubernetes Operator to Oracle Container Engine for Kubernetes (OKE) on Oracle Cloud Infrastructure (OCI). 
+* Configure kubectl (Kubernetes Cluster CLI) to connect to Kubernetes Cluster.
+* Verify Connectivity of WebLogic Kubernetes Toolkit UI to Kubernetes Cluster.
+* Install the WebLogic Kubernetes Operator to Kubernetes Cluster.
 
 
 ### Prerequisites

@@ -8,7 +8,7 @@ This lab will show you how to download the Oracle Resource Manager (ORM) stack z
 ### Objectives
 * Download ORM stack need to create Compute Instance(Virtual Machine) for this workshop.
 * Create Compute + Networking Resource Manager Stack
-* Connect to compute instance
+* Access the Graphical Remote Desktop
 
 
 ### Prerequisites

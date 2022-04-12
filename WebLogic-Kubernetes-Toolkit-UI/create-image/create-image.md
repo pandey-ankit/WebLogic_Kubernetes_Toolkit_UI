@@ -12,18 +12,12 @@ In this Lab, We specify WebLogic server 12.2.1.3.0-ol8 image as Primary Image. A
 
 In this lab, you will:
 
-* Enter WebLogic Server Image tag inside the Primary Image Tag in WebLogic Kubernetes Toolkit UI Application.
+* Enter WebLogic Server Image tag inside the Primary Image Tag.
 * Create an Auxiliary Image and push the image to Oracle Cloud Container Image Registry.
 
 ### Prerequisites
 
-* You successfully created the repository in lab 1.
-* You successfully generated the authentication token in lab 1.
-* You successfully accepted the license agreement for WebLogic Server images in lab1. 
-* You successfully created the virtual machine, which consist of all required softwares.
-* You should have a text editor, where you can paste the commands and URLs and modify them, as per your environment. Then you can copy and paste the modified commands for running them in the terminal.
-
-
+* You should have a text editor. 
 
 ## Task 1: Enter details of Primary Container Image 
 

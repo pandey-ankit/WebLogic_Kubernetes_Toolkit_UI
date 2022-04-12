@@ -8,8 +8,8 @@ In this lab, we modify the primary image, we use WebLogic Server Image with *12.
 
 In this lab, you will:
 
-* Enter detail of new WebLogic Server Image (12.2.1.4) as Primary Image in WebLogic Kubernetes Toolkit UI Application.
-* Update a deployed application by a rolling restart of the server pods.
+* Use WebLogic Server Image (12.2.1.4) as Primary Image.
+* Redeploy WebLogic Domain.
 
 ### Prerequisites
 

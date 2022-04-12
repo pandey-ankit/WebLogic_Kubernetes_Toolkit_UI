@@ -8,8 +8,8 @@ In this lab, we install the *Traefik* Ingress Controller. Later, we updates the 
 
 In this lab, you will:
 
-* Install Ingress Controller to the Oracle Container Engine for Kubernetes (OKE) on Oracle Cloud Infrastructure (OCI)
-* Update the Ingress Routes to Access the Application and Admin Console
+* Install Ingress Controller on Kubernetes Cluster.
+* Update the Ingress Routes.
 
 ### Prerequisites
 
