@@ -12,12 +12,10 @@ In this lab, you will:
 
 ### Prerequisites
 
-* You must have an [Oracle Cloud Infrastructure](https://cloud.oracle.com/en_US/cloud-infrastructure) enabled account.
-* You must have Oracle Cloud Account. You must have information about your tenancy name and cloud account credentials.
-* Successfully created the virtual machine, which consist of all required softwares.
-* You should have a text editor, where you can paste the commands and URLs and modify them, as per your environment. Then you can copy and paste the modified commands for running them in the terminal.
+* Access to noVNC Remote Desktop created in lab 1.
+* You should have a text editor.
 
-## Task 1: Deploy the WebLogic Domain to the Oracle Container Engine for Kubernetes (OKE) on Oracle Cloud Infrastructure (OCI)
+## Task 1: Deploy the WebLogic Domain to the Oracle Kubernetes Cluster
 
 In this task, we deploy the Kubernetes custom resource for the WebLogic domain to Kubernetes Cluster.
 

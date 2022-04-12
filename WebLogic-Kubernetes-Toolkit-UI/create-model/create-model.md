@@ -15,11 +15,9 @@ In this lab, you will:
 ### Prerequisites
 
 To run Lab 2, you must have:
-* You should have a text editor, where you can paste the commands, URLs and modify them, as per your environment.
-* Successfully created the Virtual machine using the custome image. As this virtual machine contains all the required software like JDK, Oracle WebLogic Server, Helm, Kubectl and Docker.
+* Access to noVNC Remote Desktop created in lab 1.
 
-
-## Task 1: Start the Admin Server and verify the resources in existing on-premise domain
+## Task 1: Start the Admin Server and Explore on-premise domain
 
 In this task, we start the Admin Server in on-premise *test-domain*, and navigate through the resources using WebLogic Administration console.
 
@@ -115,7 +113,7 @@ In this task, we perform introspection of an on-premise domain, which creates a 
 
     > The result of this WDT introspection are model(a metadata representation of your domain configuration), placeholder, where you can specify the values (like password for datasource) and application in the application archive.
 
-## Task 4: Validate and Prepare Model to be deployed on Kubernetes Cluster
+## Task 4: Validate and Prepare Model 
 
 In this task, we validate the model and prepare the model to be deployed on Oracle Kubernetes Cluster (OKE).
 

@@ -13,10 +13,10 @@ In this lab, you will:
 
 ### Prerequisites
 
-* Successfully completed the Lab 1 to Lab 5.
+* Access to noVNC Remote Desktop created in lab 1.
 
 
-## Task 1: Installtion of Ingress Controller to the Oracle Container Engine for Kubernetes (OKE) on Oracle Cloud Infrastructure (OCI)
+## Task 1: Installtion of Ingress Controller to the Oracle Kubernetes Cluster
 
 In this task, we install the *Ingress Controller*.
 
@@ -29,7 +29,7 @@ In this task, we install the *Ingress Controller*.
     ![Ingress Controller Installed](images/IngressControllerInstalled.png)
 
 
-## Task 2: Update the Ingress Routes to Access the Application and Admin Console
+## Task 2: Update the Ingress Routes to Access the Application
 
 In this task, we add the Ingress routes for Accessing the Admin Console, Application. At the end, we get the accessible endpoints.
 

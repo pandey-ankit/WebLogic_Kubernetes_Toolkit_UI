@@ -13,10 +13,7 @@ In this lab, you will:
 
 ### Prerequisites
 
-* Successfully accepted the license agreement for WebLogic Server images in lab1.
-* Successfully created the virtual machine, which consist of all required softwares.
-* You should have a text editor, where you can paste the commands and URLs and modify them, as per your environment. Then you can copy and paste the modified commands for running them in the terminal.
-
+* Access to noVNC Remote Desktop created in lab 1.
 
 ## Task 1: Enter detail of new WebLogic Server Image as Primary Image
 

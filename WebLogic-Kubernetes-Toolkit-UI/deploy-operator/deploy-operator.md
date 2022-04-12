@@ -14,11 +14,11 @@ In this lab, you will:
 
 
 ### Prerequisites
-* You must have Oracle Cloud Account. You must have information about your tenancy name and cloud account credentials.
-* Successfully created the virtual machine, which consist of all required softwares.
 
-## Task 1: Configure kubectl (Kubernetes Cluster CLI) to connect to Oracle Container Engine for Kubernetes (OKE) on Oracle Cloud Infrastructure (OCI)
+* Access to noVNC Remote Desktop created in lab 1.
+* You should have a text editor.
 
+## Task 1: Configure kubectl (Kubernetes Cluster CLI) to connect to Oracle Kubernetes Cluster
 In this Task, we creats the configuration file *.oci/config* and *.kube/config* in */home/opc* directory. This configuration file allow us to access Oracle Kubernetes Cluster (OKE) from this virtual machine.
 
 1. In the Console, select the *Hamburger Menu* -> *Developer Services* -> *Kubernetes Clusters (OKE)* as shown.
@@ -56,8 +56,7 @@ In this Task, we creats the configuration file *.oci/config* and *.kube/config* 
 
 
 
-## Task 2: Verify Connectivity of WebLogic Kubernetes Toolkit UI to Oracle Container Engine for Kubernetes (OKE) on Oracle Cloud Infrastructure (OCI)
-
+## Task 2: Verify Connectivity of WebLogic Kubernetes Toolkit UI to Oracle Kubernetes Cluster
 In this task, we verify the connectivity to *Oracle Kubernetes Cluster(OKE)* from the `WebLogic Kubernetes Toolkit UI` application.
 
 1. Go back to WebLogic Kubernetes Tool Kit UI, Click *Activities* and select the WebLogic Kubernetes Tool Kit UI window. 
@@ -69,8 +68,7 @@ In this task, we verify the connectivity to *Oracle Kubernetes Cluster(OKE)* fro
 3. Once you see *Verify Kubernetes Client Connectivity Success* window, Click *Ok*.
     ![Successfully Connected](images/SuccessfullyConnected.png)
 
-## Task 3: Install the WebLogic Kubernetes Operator to Oracle Container Engine for Kubernetes (OKE) on Oracle Cloud Infrastructure (OCI)
-
+## Task 3: Install the WebLogic Kubernetes Operator to Oracle Kubernetes Cluster
 This section provides support for installing the WebLogic Kubernetes Operator (the “operator”) in the target Kubernetes cluster. 
 
 1. Click *WebLogic Operator*. Specify the following configuration details  and click *Install Operator*.

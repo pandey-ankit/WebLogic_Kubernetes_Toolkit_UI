@@ -31,8 +31,8 @@ In this lab, you will:
 
 ### Prerequisites
 
-* Successfully created the virtual machine, which consist of all required softwares.
-* You should have a text editor, where you can paste the commands and URLs and modify them, as per your environment. Then you can copy and paste the modified commands for running them in the terminal.
+* Access to noVNC Remote Desktop created in lab 1.
+* You should have a text editor.
 
 ## Task 1: Access the Application through the Browser
 
@@ -49,7 +49,7 @@ In this task, we access the *opdemo* application. We click on refresh icon to ma
     ![Show Loadbalancing](images/ShowLoadbalancing.png)
 
 
-## Task 2: Connection to Admin Server using WebLogic Remote Console
+## Task 2: Explore WebLogic Domain on Kubernetes Cluster using WebLogic Remote Console
 
 In this task, we explore the WebLogic Remote Console. We create connection to *Admin Server* in Remote Console and verify the resources in WebLogic Domain. This verifies the successful migration of an on-premise domain into the Oracle Kubernetes Cluster. 
 

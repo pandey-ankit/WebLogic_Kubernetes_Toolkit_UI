@@ -29,7 +29,7 @@ In this lab, you will create a 3-node Kubernetes cluster configured with all of 
 
 In this lab, you will:
 
-* Create an OKE (Oracle Kubernetes Engine) instance with the required network resources, a node pool, and three worker nodes.
+* Create an Oracle Kubernetes Cluster.
 * Create a repository inside Oracle Cloud Container Image Registry.
 * Generate an authentication token.
 * Accept the license for WebLogic Server Images in Oracle Container Registry.
@@ -37,11 +37,10 @@ In this lab, you will:
 ### Prerequisites
 
 * You must have an [Oracle Cloud Infrastructure](https://cloud.oracle.com/en_US/cloud-infrastructure) enabled account.
-* You must have Oracle Cloud Account. You must have information about your tenancy name and cloud account credentials.
-* You should have a text editor, where you can paste the commands, URLs and modify them, as per your environment.
+* You must have Oracle Account. 
+* You should have a text editor.
 
-
-## Task 1: Set up an Oracle Kubernetes Engine Instance on the Oracle Cloud Infrastructure
+## Task 1: Create an Oracle Kubernetes Cluster
 
 The *Quick Create* feature uses the default settings to create a *quick cluster* with new network resources as required. This approach is the fastest way to create a new cluster. If you accept all the default values, you can create a new cluster in just a few clicks. New network resources for the cluster are created automatically, along with a node pool and three worker nodes.
 
@@ -81,7 +80,7 @@ In this task, we uses the *Quick Create* features to create the Oracle Kubernete
 
     > Then, the new cluster is shown on the *Cluster Details* page. When the master nodes are created, the new cluster gains a status of *Active* (it takes about 7 minutes). Please don't wait and proceed for the next task.
 
-## Task 2: Creation of repository inside Oracle Cloud Container Registry Repository
+## Task 2: Creation of an Repository
 
 In this task, you creates a public repository. In lab 3, we will push Auxiliary Image into this repository.
 
@@ -99,7 +98,7 @@ In this task, you creates a public repository. In lab 3, we will push Auxiliary 
 
 
 
-## Task 3: Generate an Authentication Token to push Auxiliary Image to the Oracle Cloud Container Registry
+## Task 3: Generate an Authentication Token 
 
 In this task, we will generate an *Authentication Token*. In lab 3, we will use this authentication token to push auxiliary image into the Oracle Cloud Container Registry Repository.
 
@@ -119,7 +118,7 @@ In this task, we will generate an *Authentication Token*. In lab 3, we will use 
 
     ![Copy Token](images/CopyToken.png)
 
-## Task 4: Accepting the license for WebLogic Server Images in Oracle Container Registry
+## Task 4: Accepting the license for WebLogic Server Images 
 
 In this task, we accept the license agreement for WebLogic Server images resides in Oracle Container Registry. As in Lab 3, we will use WebLogic Server 12.2.1.3.0 image as our Primary Image. So, to get access to WebLogic Server Images, we accept the license agreement.
 

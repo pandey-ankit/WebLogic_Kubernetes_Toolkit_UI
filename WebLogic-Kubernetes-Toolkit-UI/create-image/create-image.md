@@ -17,7 +17,8 @@ In this lab, you will:
 
 ### Prerequisites
 
-* You should have a text editor. 
+* Accepted the license for WebLogic Server Images, Created Repository and Generated Authentication token in lab 2.
+* You should have a text editor.
 
 ## Task 1: Enter details of Primary Container Image 
 
@@ -34,7 +35,7 @@ In lab 1, we accepted the license agreement for WebLogic Server Images. In this 
     > The primary image is the one used for running the domain. One primary image can be reused for hundreds of domains. The primary image contains the OS, JDK, and FMW software installations.
 
 
-## Task 2: Prepare Auxiliary Image and Push the Auxiliary Image to Oracle Container Image Registry 
+## Task 2: Prepare Auxiliary Image and Push the Auxiliary Image 
 
 In this task, We are creating an Auxiliary image, which we will push to the Oracle Cloud Container Registry.
 

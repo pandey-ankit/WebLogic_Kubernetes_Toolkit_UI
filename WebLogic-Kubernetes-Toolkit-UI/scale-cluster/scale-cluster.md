@@ -12,7 +12,7 @@ In this lab, you will:
 
 ### Prerequisites
 
-* Successfully created the virtual machine, which consist of all required softwares.
+* Access to noVNC Remote Desktop created in lab 1.
 
 ## Task 1: Scaling a WebLogic Cluster using WebLogic Kubernetes Toolkit UI
 
