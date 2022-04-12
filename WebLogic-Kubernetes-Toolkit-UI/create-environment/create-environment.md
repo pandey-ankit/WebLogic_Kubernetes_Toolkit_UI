@@ -2,28 +2,7 @@
 
 ## Introduction
 
-### About Oracle Cloud Infrastructure Container Engine for Kubernetes
-
-Oracle Cloud Infrastructure Container Engine for Kubernetes is a fully-managed, scalable, and highly available service that you can use to deploy your container applications to the cloud. Use the Container Engine for Kubernetes (sometimes abbreviated OKE) when your development team wants to reliably build, deploy, and manage cloud-native applications. You specify the compute resources that your applications require, and OKE provisions them on the Oracle Cloud Infrastructure in an existing OCI tenancy.
-
-To create the Container Engine for Kubernetes (OKE), complete the following steps:
-
-* Create the network resources (VCN, subnets, security lists, etc.).
-* Create a cluster.
-* Create a `NodePool`.
-
-This lab shows you how the *Quick Start* feature creates and configures all the necessary resources for a 3-node Kubernetes cluster. All the nodes will be deployed in different availability domains to ensure high availability.
-
-For more information about OKE and custom cluster deployment, see the [Oracle Container Engine](https://docs.cloud.oracle.com/iaas/Content/ContEng/Concepts/contengoverview.htm) documentation.
-
-### About Oracle Virtual Cloud Networks
-
-Oracle virtual cloud networks (VCNs) provide customizable and private cloud networks in Oracle Cloud Infrastructure (OCI). Just like a traditional data center network, the VCN provides customers with complete control over their cloud networking environment. This includes assigning private IP address spaces, creating subnets and route tables, and configuring stateful firewalls.
-
-For more information about Virtual Cloud Network and Subnet, see the [Oracle Virtual Cloud Network](https://www.oracle.com/in/cloud/networking/virtual-cloud-network/) documentation.
-
-
-In this lab, you will create a 3-node Kubernetes cluster configured with all of the necessary network resources. Also, you will create a repository inside Oracle Cloud Container Image Registry. Then, you w generate an authentication token. Further, you will accept the license agreement for WebLogic Server images in Oracle Container Registry. At last, you will create Virtual Cloud Network and its associated resources.
+In this lab, you will create a 3-node Kubernetes cluster configured with all of the necessary network resources. Also, you will create a repository inside Oracle Cloud Container Image Registry. Then, you will generate an authentication token. Further, you will accept the license agreement for WebLogic Server images in Oracle Container Registry. 
 
 ### Objectives
 
@@ -139,6 +118,12 @@ In this task, we accept the license agreement for WebLogic Server images resides
     ![Accept License](images/AcceptLicense.png)
 
 
+
+## Learn More
+
+*About Oracle Cloud Infrastructure Container Engine for Kubernetes*
+
+Oracle Cloud Infrastructure Container Engine for Kubernetes is a fully-managed, scalable, and highly available service that you can use to deploy your container applications to the cloud. Use the Container Engine for Kubernetes (sometimes abbreviated OKE) when your development team wants to reliably build, deploy, and manage cloud-native applications. You specify the compute resources that your applications require, and OKE provisions them on the Oracle Cloud Infrastructure in an existing OCI tenancy.
 
 ## Acknowledgements
 
