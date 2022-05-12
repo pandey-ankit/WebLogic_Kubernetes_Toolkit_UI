@@ -1,67 +1,65 @@
 # Prepare Setup
 
 ## Introduction
-This lab will show you how to download the Oracle Resource Manager (ORM) stack zip file and how to setup a Resource Manager Stack that will generate a compute instance and a Virtual Cloud Network (VCN).
+This lab will show you how to download the Oracle Resource Manager (ORM) stack zip file needed to setup the resource needed to run this workshop. This workshop requires a compute instance running the *Oracle Database 19c on LiveLabs* Marketplace image and a Virtual Cloud Network (VCN).
 
-*Estimated Lab Time:* 15 minutes
+*Estimated Lab Time:* 10 minutes
 
 ### Objectives
-* Download ORM stack need to create Compute Instance(Virtual Machine) for this workshop.
-* Create Compute + Networking Resource Manager Stack
-* Access the Graphical Remote Desktop
-
+-   Download ORM stack
+-   Configure an existing Virtual Cloud Network (VCN)
 
 ### Prerequisites
 This lab assumes you have:
-* An Oracle Free Tier or Paid Cloud account
-* Have sufficient quota for in your tenancy to create VM and VCN.
+- An Oracle Free Tier or Paid Cloud account
 
 ## Task 1: Download Oracle Resource Manager (ORM) stack zip file
-1.  Click on the link below to download the Resource Manager zip file you need to build your environment: [wktui-mkplc-freetier.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/sDX34HYvxdv1GjdCplfdYt-HSj9NBe4rjsXgltW0Ax5VPGmhSlGBpqm3wVVvhFxR/n/oraclepartnersas/b/omlvm-mkplc-freetier/o/omlvm-mkplc-freetier.zip)
+1.  Click on the link below to download the Resource Manager zip file you need to build your environment:
+
+    *Note 1:* If providing a single Stack download for the workshop, use this simple expression.
+
+    - [wls-oke-toolkit-mkplc-freetier.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/bh1LaVd0DpYAVbAcrL4k-Y1WLC-KAEo117Msw7P2kN-xvNOWGaVcGtjxnkBVumb8/n/natdsecurity/b/stack/o/wls-oke-toolkit-mkplc-freetier.zip)
+
+    *Note 2:* If providing multiple Stacks download for the same workshop, use a conditional expression similar to the below. Keep in mind that the condition or *type* must be paired with a valid entry in the *manifest.json* file. Refer to *freetier-advanced* and *freetier-basics* 
+
+<if type="advanced">
+    - [sample-mkplc-advanced.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/_EIwsXv5v6KkKcQldUQixExqAgJCbY826XovJec4I25rc4dHEZW4whrF-nb2QUye/n/natdsecurity/b/stack/o/sample-mkplc-advanced.zip)
+</if>
+<if type="basics">
+    - [sample-mkplc-basics.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/m4wcgeN1hw9D1zV3pgOkbRjwanAt5dIW7QsZS7znZNnHU63vh495UHhkiRtaDJHE/n/natdsecurity/b/stack/o/sample-mkplc-basics.zip)
+</if>
 
 2.  Save in your downloads folder.
 
-## Task 2: Setup Compute and Networking
+We strongly recommend using this stack to create a self-contained/dedicated VCN with your instance(s). Skip to *Task 3* to follow our recommendations. If you would rather use an exiting VCN then proceed to the next step as indicated below to update your existing VCN with the required Egress rules.
 
-Proceed to deploy your workshop environment using Oracle Resource Manager (ORM) stack.
+## Task 2: Adding Security Rules to an Existing VCN   
+This workshop requires a certain number of ports to be available, a requirement that can be met by using the default ORM stack execution that creates a dedicated VCN. In order to use an existing VCN the following ports should be added to Egress rules
 
-1. Identify the ORM stack zip file downloaded in Task 1.
+| Port           |Description                            |
+| :------------- | :------------------------------------ |
+| 22             | SSH                                   |
+| 80             | noVNC Remote Desktop (NGINX Proxy)    |
+| 6080           | noVNC Remote Desktop                  |
 
-2. Login to Oracle Cloud.
+1.  Go to *Networking >> Virtual Cloud Networks*
+2.  Choose your network
+3.  Under Resources, select Security Lists
+4.  Click on Default Security Lists under the Create Security List button
+5.  Click Add Ingress Rule button
+6.  Enter the following:  
+    - Source CIDR: 0.0.0.0/0
+    - Destination Port Range: *Refer to above table*
+7.  Click the Add Ingress Rules button
 
-3. Open up the hamburger menu in the left hand corner.  Click **Developer Services**, choose **Resource Manager > Stacks**. Choose the compartment in which you would like to install. Click **Create Stack**.
+## Task 3: Setup Compute   
+Using the details from the two Tasks above, proceed to the lab *Environment Setup* to setup your workshop environment using Oracle Resource Manager (ORM) and one of the following options:
+-  Create Stack:  *Compute + Networking*
+-  Create Stack:  *Compute only* with an existing VCN where security lists have been updated as per *Task 2* above
 
-4. Select **My Configuration**, choose the **.ZIP FILE** button, click the **Browse** link and select the zip file that you downloaded or drag-n-drop for the file explorer.
-
-5. Click **Next**.
-
-6. Enter or select the following:
-    **Instance Count:** Accept the default, **1**.
-    **Select Availability Domain:** Select an availability domain from the dropdown list.
-    **Need Remote Access via SSH?** Keep Unchecked for Remote Desktop only Access - The Default
-    **Use Flexible Instance Shape with Adjustable OCPU Count?:** Keep the default as checked (unless you plan on using a fixed shape)
-    **Instance Shape:** Keep the default (*VM.Standard.E4.Flex*).
-    **Select OCPUs Count per Instance:** Accept the default shown(**1**).
-    **Use Existing VCN?:** Accept the default by leaving this unchecked. This will create a **new VCN**.
-
-7. Click **Next**.
-
-8. check the box for  **Run Apply** and click **Create**.
-
-9. Your stack has is now created and the *Apply* action triggered is running to deploy your environment!  
-
-## Task 3: Access the Graphical Remote Desktop
-
-For ease of execution of this workshop, your VM instance has been pre-configured with a remote graphical desktop accessible using any modern browser on your laptop or workstation. Proceed as detailed below to login.
-
-1. Navigate to **Stack Details**, **Application Information** tab, and click on the remote desktop URL.
-
-  This should take you directly to your remote desktop in a single click.
-
-You may now [proceed to the next lab](#next).
+You may now proceed to the next lab.
 
 ## Acknowledgements
-
-* **Author** - Rene Fontcha, Master Principal Solutions Architect, NA Technology
-* **Contributors** - Meghana Banka, Rene Fontcha, Narayanan Ramakrishnan
-* **Last Updated By/Date** - Rene Fontcha, LiveLabs Platform Lead, NA Technology, January 2021
+* **Author** - Rene Fontcha, LiveLabs Platform Lead, NA Technology
+* **Contributors** - Meghana Banka
+* **Last Updated By/Date** - Rene Fontcha, LiveLabs Platform Lead, NA Technology, February 2022

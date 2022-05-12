@@ -16,7 +16,12 @@
             "filename": "../../prepare-setup/prepare-setup.md"
         },
         {
-            "title": "Lab 2: Set up the Cloud Environment",
+            "title": "Lab 2: Environment Setup",
+            "description": "How to provision the workshop environment and connect to it",
+            "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/setup-compute-generic/setup-compute-novnc-ssh.md"
+          },
+        {
+            "title": "Lab 2: Set up the resources",
             "filename": "../../create-environment/create-environment.md"
         },
         {
