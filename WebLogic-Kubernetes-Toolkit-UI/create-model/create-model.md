@@ -14,49 +14,35 @@ In this lab, you will:
 
 ### Prerequisites
 
-To run Lab 2, you must have:
-* Access to noVNC Remote Desktop created in lab 1.
+To run this lab, you must have:
+* Access to noVNC Remote Desktop created in lab 2.
 
-## Task 1: Start the Admin Server and Explore on-premise domain
+## Task 1: Explore on-premise domain
 
-In this task, we start the Admin Server in on-premise *test-domain*, and navigate through the resources using WebLogic Administration console.
+In this task, we navigate through the resources in on-premise *test-domain* using WebLogic Administration console.
 
 1. On left side, click *Arrow Icon*. 
     ![Clipboard](images/clipboard.png)
- > **Important**- Again click on *Arrow Icon* to hide the *Settings* option. You can see the *Clipboard*, for copy and paste between the host machine and remote desktop, we use the *Clipboard*. For example, if you want to copy from the host machine and want to paste it inside the remote desktop, you need to first paste in the clipboard first, then you can paste it in remote desktop.
+ > **Important**- You can see the *Clipboard*, for copy and paste between the host machine and remote desktop, we use the *Clipboard*. For example, if you want to copy from the host machine and want to paste it inside the remote desktop, you need to first paste in the clipboard first, then you can paste it in remote desktop. Again click on *Arrow Icon* to hide the *Settings* option.
 
-2. To open the terminal, click *Activities* -> *Terminal icon*.
-    ![Open Terminal](images/openterminal.png)
- 
-3. To start the Admin Server in *test-domain*, copy the following commands and paste it in terminal.
-    ````bash
-    <copy>./startSetup.sh</copy>
-    ````
-    ![Start Setup](images/startsetup.png)
-
-    > **Important**<br>
-    > This start Admin Server in on-premise WebLogic Domain and open the workshop document on left side of remote desktop and Admin Console on right side of remote desktop. 
-
-    ![Workshop Document](images/workshopdocument.png)
-  
-4. Enter *weblogic/Welcome1%* as `Username/Password`, then click *Login*. You can see, we have WebLogic Server version *12.2.1.3.0*.   
+2. Enter *weblogic/Welcome1%* as `Username/Password`, then click *Login*. You can see, we have WebLogic Server version *12.2.1.3.0*.   
     ![Login Admin Console](images/loginadminconsole.png)
 
-5. To view available servers, expand *Environment* and click *Servers*. You can see, we have one dynamic clusters with 5 managed servers. 
+3. To view available servers, expand *Environment* and click *Servers*. You can see, we have one dynamic clusters with 5 managed servers. 
     ![View Servers](images/viewservers.png)
 
-6. To view the datasources, expand *Services* and click *Data Sources*.
+4. To view the datasources, expand *Services* and click *Data Sources*.
     ![View Datasources](images/viewdatasources.png)
 
-7. To view the deployed application, click *Deployment*. You can see, we have *opdemo* as deployed application.
+5. To view the deployed application, click *Deployment*. You can see, we have *opdemo* as deployed application.
     ![View Deployments](images/viewdeployments.png)
 
 ## Task 2: Opening the base WKT UI Project
 
-For simplicity of lab, we created *`base_project.wktproj`*, which preset the location of docker, Java and Oracle Home. In this task, we open  *`base_project.wktproj`* project.
+For simplicity of lab, we created *`base_project.wktproj`*, which preset the location of docker, Java, Oracle Home, Primary Image Tag. In this task, we open  *`base_project.wktproj`* project.
 
-1. Click *Activities* and then select the icon for *WebLogic Kubernetes Toolkit UI*.
-    ![Open WKTUI](images/OpenWKTUI.png)
+1. Click *Activities* and then type **WebLogic** in search box. Click the icon for *WebLogic Kubernetes Toolkit UI*.
+    ![Open WKTUI](images/openwktui.png)
 
 2. To open *base_project.wktproj* project, click *File* -> *Open Project*. 
     ![Open Project](images/OpenProject.png)
@@ -74,10 +60,13 @@ For simplicity of lab, we created *`base_project.wktproj`*, which preset the loc
     ![Kubernetes Cluster Type](images/KubernetesClusterType.png)
     ![Software Locations](images/SoftwareLocations.png)
 
+4. Enter *welcome1* as **Password** and then click *Unlock*.
+    ![unlock](images/unlock.png)
+
 
 ## Task 3: Introspection of an Offline on-premise domain 
 
-In this task, we perform introspection of an on-premise domain, which creates a model file consist of domain configuration.
+In this task, we perform introspection of an on-premise domain, which creates a model file consisting of the domain configuration.
 
 1. In WebLogic Kubernetes Toolkit UI, Click *Model*.
     ![Model](images/Model.png)
@@ -91,7 +80,7 @@ In this task, we perform introspection of an on-premise domain, which creates a 
 4. In the Home folder, navigate to *`/home/opc/Oracle/Middleware/Oracle_Home/user_projects/domains/`* directory and select *test-domain* folder then  click *Select*. Click *OK*.
     ![Navigate Location](images/NavigateLocation.png)
     ![Specify Location](images/SpecifyLocation.png)
-    > If you look the console, you will see that this invokes WebLogic Deployer Tool to introspect the domain configuration in offline mode. 
+    > If you look in the console, you will see that this invokes WebLogic Deployer Tool to introspect the domain configuration in offline mode. 
 
 5. You can see the window as shown below, at the end, you will have model ready for you.
     ![View Model](images/ViewModel.png)

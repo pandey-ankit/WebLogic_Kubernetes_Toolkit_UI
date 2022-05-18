@@ -11,10 +11,6 @@ In this lab, you will:
 * Install Ingress Controller on Kubernetes Cluster.
 * Update the Ingress Routes.
 
-### Prerequisites
-
-* Access to noVNC Remote Desktop created in lab 1.
-
 
 ## Task 1: Installtion of Ingress Controller to the Oracle Kubernetes Cluster
 
@@ -56,7 +52,7 @@ In this task, we add the Ingress routes for Accessing the Admin Console, Applica
         Target Port: 8001<br>
     ![Opdemo Ingress](images/OpdemoIngress.png)
 
-5. In the similar way, add the following *opdemo* Ingress Routes as well:<br>
+5. In the similar way, add the following *remote-console* Ingress Routes as well:<br>
         Name: remote-console<br>
         Path Expression: / <br>
         Target Service Namespace: test-domain-ns<br>
@@ -69,7 +65,8 @@ In this task, we add the Ingress routes for Accessing the Admin Console, Applica
 
 7. Once you see *Ingress Routes Update Complete* window, Click *Ok*.
     ![Update Ingress Complete](images/UpdateIngressComplete.png)
-    > You need to notedown this IP.
+    
+    > You need to notedown this IP and save it in text file.
 
 ## Acknowledgements
 

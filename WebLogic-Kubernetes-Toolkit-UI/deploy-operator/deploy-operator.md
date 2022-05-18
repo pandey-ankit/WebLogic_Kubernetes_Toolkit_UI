@@ -13,38 +13,31 @@ In this lab, you will:
 * Install the WebLogic Kubernetes Operator to Kubernetes Cluster.
 
 
-### Prerequisites
-
-* Access to noVNC Remote Desktop created in lab 1.
-* You should have a text editor.
-
 ## Task 1: Configure kubectl (Kubernetes Cluster CLI) to connect to Oracle Kubernetes Cluster
 In this Task, we creats the configuration file *.oci/config* and *.kube/config* in */home/opc* directory. This configuration file allow us to access Oracle Kubernetes Cluster (OKE) from this virtual machine.
 
-1. In the Console, select the *Hamburger Menu* -> *Developer Services* -> *Kubernetes Clusters (OKE)* as shown.
+1. Click *Activities* and type *Firefox* in search box. Click on the icon for *Firefox*.
+    ![open firefox](images/openfirefox.png)
+
+2. Open the url [https://cloud.oracle.com](https://cloud.oracle.com). Enter your *Cloud Account Name* and then your credential for Oracle Cloud Account and click *Sign In*.
+
+3. In the Console, select the *Hamburger Menu* -> *Developer Services* -> *Kubernetes Clusters (OKE)* as shown.
     ![OKE Icon](images/OKEIcon.png)
 
-2. Click *Access Cluster*. 
+2. Click on the cluster name which your created in lab 3. and then click *Access Cluster*. 
     ![Access Cluster](images/AccessCluster.png)
 
 
 3. Select *Local Access* and then click on *Copy* as shown.
     ![Local Access](images/LocalAccess.png)
 
-4. Go back to terminal, Click on *Activities* and select the *Terminal*.
-    ![Terminal](images/Terminal.png)
+4. Click on *Activities* and select the *Terminal*.
+    ![Terminal](images/terminal.png)
 
 5. Paste the copied command in the terminal. For *Do you want to create a new config file?*, Type *y* then press *Enter*. For *Do you want to create your config file by logging in through a browser?*, Type *y* then press *Enter*.
     ![OCI Config](images/OCIConfig.png)
 
-6. In Chrome Browser, Click *Accept all*.
-    ![Accept Cache](images/AcceptCache.png)
-
-7. Enter your tenancy name and click *Continue*.
-    ![Tenancy Name](images/TenancyName.png)
-
-8. Enter your Cloud account Username and Password and then click *Sign In*.
-    ![Cloud Credential](images/CloudCredential.png)
+6. In Firefox Browser, click on your active session.
     > You will see *Authorization Completed* as shown.
     ![Authorization Complete](images/AuthorizationComplete.png)
 
@@ -60,7 +53,6 @@ In this Task, we creats the configuration file *.oci/config* and *.kube/config* 
 In this task, we verify the connectivity to *Oracle Kubernetes Cluster(OKE)* from the `WebLogic Kubernetes Toolkit UI` application.
 
 1. Go back to WebLogic Kubernetes Tool Kit UI, Click *Activities* and select the WebLogic Kubernetes Tool Kit UI window. 
-    ![Client Configuration](images/ClientConfiguration.png)
 
 2. Click  *Kubernetes* ->  *Client Configuration* and then click *Verify Connectivity*.
     ![Verify Connectivity](images/VerifyConnectivity.png)

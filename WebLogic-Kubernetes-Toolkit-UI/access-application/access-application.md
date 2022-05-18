@@ -29,10 +29,6 @@ In this lab, you will:
 * Access the Application through the Browser.
 * Explore the WebLogic Domain using WebLogic Remote Console.
 
-### Prerequisites
-
-* Access to noVNC Remote Desktop created in lab 1.
-* You should have a text editor.
 
 ## Task 1: Access the Application through the Browser
 
@@ -53,25 +49,27 @@ In this task, we access the *opdemo* application. We click on refresh icon to ma
 
 In this task, we explore the WebLogic Remote Console. We create connection to *Admin Server* in Remote Console and verify the resources in WebLogic Domain. This verifies the successful migration of an on-premise domain into the Oracle Kubernetes Cluster. 
 
-1. To open WebLogic Remote Console, Click on *Activities*, then select the *WebLogic Remote Console* Icon.
-    ![Open Remote Console](images/openremoteconsole.png)
+1. To open WebLogic Remote Console, Click on *Activities*, type *WebLogic* in search box and click on the *WebLogic Remote Console* Icon.
 
 2. Click on `Three dots` under *Kiosk* and Select *Add Admin Server Connection Provider* and click *Choose*.
     ![Admin Server Connection](images/adminserverconnection.png)
 
 3. Enter the following data and click *OK*.<br>
-    Connection Provider Name: Admin<br> Server<br>
+    Connection Provider Name: AdminServer<br>
     Username: weblogic<br>
     Password: welcome1<br>
-    URL:  `Copy_IP_From_TextEditor`</br>
+    URL:  `Copy_IP_From_TextFile`</br>
     ![Connection Details](images/ConnectionDetails.png)
 
 4. Click on *Edit Tree* icon, then Select *Services* -> *JDBC System Resources*. You can observe the same Datasouce, which we had seen in on-premise domain.
     ![Verify Datasources](images/VerifyDatasources.png)
 
-5. Click on *Monitoring Tree* Icon as shown then select *Running Servers*. You can see we have *Admin Server* and 2 Managed Server pods are running. If you use *Scroll* Button in down side, you can see WebLogic Versin is *12.2.1.3.0*.
-    ![Running Servers](images/RunningServers.png)
-    ![WebLogic Version](images/WebLogicVersion.png)
+5. Click on **Monitoring Tree** Icon as shown then select **Running Servers**. You can see we have **Admin Server** and 2 Managed Server pods are running. Click on **admin-server**, you can see WebLogic Version is **12.2.1.3.0**.
+    ![Running Servers](images/wlsversion.png)
+
+6. To display what servers are running in your domain. Click the **Configuration view Tree** icon, click **Environment** and **Servers**. In the servers drop down box, select **Status- Monitoring Tree**.
+    ![Server Status](images/runningserverstatus.png)
+    ![Running](images/running.png)
 
 
 ## Acknowledgements

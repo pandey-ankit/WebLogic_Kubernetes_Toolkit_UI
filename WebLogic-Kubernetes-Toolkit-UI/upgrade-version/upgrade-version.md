@@ -40,11 +40,17 @@ In this task, we re-deploy the WebLogic Domain. Later, we use the WebLogic Remot
     ```
     ![View Pods](images/ViewPods.png)
 
-4. To Verify that Admin Server and Managed Server pods are using updated WebLogic Server image, click *Monitoring Tree* icon and then select *Running Servers*. Use the *Scroll* bar below to view the *WebLogic Server Version*.
-    ![WebLogic Version](images/WebLogicVersion.png)
+4. To Verify that Admin Server and Managed Server pods are using updated WebLogic Server image, click Monitoring Tree icon and then select Running Servers -> admin-server. You can see, it is using 12.2.1.4.0.
+    ![WLS version](images/wlsversion.png)
+
+Congratulation !!!
+
+This is the end of the workshop.
+
+We hope you have found this workshop useful.
 
 ## Acknowledgements
 
 * **Author** -  Ankit Pandey
 * **Contributors** - Maciej Gruszka, Sid Joshi
-* **Last Updated By/Date** - Kamryn Vinson, January 2022
+* **Last Updated By/Date** - Ankit Pandey, May 2022

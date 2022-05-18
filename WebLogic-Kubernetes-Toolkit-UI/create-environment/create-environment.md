@@ -16,14 +16,14 @@ In this lab, you will:
 ### Prerequisites
 
 * You must have an [Oracle Cloud Infrastructure](https://cloud.oracle.com/en_US/cloud-infrastructure) enabled account.
-* You must have Oracle Account. 
+* You must have an Oracle Account. 
 * You should have a text editor.
 
 ## Task 1: Create an Oracle Kubernetes Cluster
 
 The *Quick Create* feature uses the default settings to create a *quick cluster* with new network resources as required. This approach is the fastest way to create a new cluster. If you accept all the default values, you can create a new cluster in just a few clicks. New network resources for the cluster are created automatically, along with a node pool and three worker nodes.
 
-In this task, we uses the *Quick Create* features to create the Oracle Kubernetes Cluster. In Lab 5, we use this Kubernetes cluster as target cluster, where we will deploy the migrated WebLogic Domain.
+In this task, we uses the *Quick Create* features to create the Oracle Kubernetes Cluster. 
 
 1. In the Console, select the *Hamburger Menu* -> *Developer Services* -> *Kubernetes Clusters (OKE)* as shown.
         ![Developer Services](images/DeveloperServices.png)
@@ -61,7 +61,7 @@ In this task, we uses the *Quick Create* features to create the Oracle Kubernete
 
 ## Task 2: Creation of an Repository
 
-In this task, you creates a public repository. In lab 3, we will push Auxiliary Image into this repository.
+In this task, you creates a public repository. In lab 5, we will push Auxiliary Image into this repository.
 
 1. In the Console, select the *Hamburger Menu* -> *Developer Services* -> *Container Registry* as shown.
     ![Container Registry Icon](images/ContainerRegistryIcon.png)
@@ -72,14 +72,14 @@ In this task, you creates a public repository. In lab 3, we will push Auxiliary 
 3. Enter *`test-model`* as Repository name and Access as *Public* then click *Create repository*.
     ![Repository Details](images/RepositoryDetails.png)
 
-4. Once your repository is ready. Please note down the tenancy namespace in your text editor.
+4. Once your repository is ready. Please note down the tenancy namespace in your text file inside the text editor.
     ![Note Tenancy NameSpace](images/NoteTenancyNamespace.png)
 
 
 
 ## Task 3: Generate an Authentication Token 
 
-In this task, we will generate an *Authentication Token*. In lab 3, we will use this authentication token to push auxiliary image into the Oracle Cloud Container Registry Repository.
+In this task, we will generate an *Authentication Token*. In lab 5, we will use this authentication token to push auxiliary image into the Oracle Cloud Container Registry Repository.
 
 1. Select the User Icon in the top right corner and then select *MyProfile*.
 
