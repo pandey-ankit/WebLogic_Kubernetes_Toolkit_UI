@@ -2,7 +2,10 @@
 
 ## Introduction
 
-In this lab, you will create a 3-node Kubernetes cluster configured with all of the necessary network resources. Also, you will create a repository inside Oracle Cloud Container Image Registry. Then, you will generate an authentication token. Further, you will accept the license agreement for WebLogic Server images in Oracle Container Registry. 
+In this lab, you will create a 3-node Kubernetes cluster configured with all of the necessary network resources. Also, you will create a repository inside Oracle Cloud Container Image Registry. Then, you will generate an authentication token. Further, you will accept the license agreement for WebLogic Server images in Oracle Container Registry.
+
+Watch the video below for a quick walk-through of the lab.
+[Setup the Lab Environment](videohub:1_pwn1cqzd)
 
 ### Objectives
 
@@ -32,7 +35,7 @@ In this task, we uses the *Quick Create* features to create the Oracle Kubernete
         ![Select Compartment](images/select-compartment-cluster.png)
 > You need to select a compartment in which you are allowed to create a cluster and also, a repository inside the Oracle Container Registry.
 
-3. In the Create Cluster Solution dialog, select *Quick Create* and click *Launch Workflow*. `Quick Create` will create a new cluster with the default settings, along with new network resources for the new cluster.
+3. In the Create Cluster Solution dialog, select *Quick Create* and click *Submit*. `Quick Create` will create a new cluster with the default settings, along with new network resources for the new cluster.
 
 ![Launch Workflow](images/launch-workflow.png)
 
