@@ -32,6 +32,7 @@ This lab assumes you have:
     ![browse zip](images/browse-zip.png)
 
 4. Enter or select the following and click **Next**.
+
     **Instance Count:** Accept the default, 1.
 
     **Select Availability Domain:** Select an availability domain from the dropdown list.
@@ -51,6 +52,14 @@ This lab assumes you have:
 
 7. Select **Run Apply** and click **Create**.
     ![run apply](images/run-apply.png)
+
+
+## Task 2: Access the Graphical Remote Desktop
+
+For ease of execution of this workshop, your VM instance has been pre-configured with a remote graphical desktop accessible using any modern browser on your laptop or workstation. Proceed as detailed below to log in.
+
+1. Navigate to **Stack Details** -> **Application Information** tab, and copy **Remote Desktop URL** and paste it in new browser tab.
+    ![desktop url](images/desktop-url.png)
 
 You may now proceed to the next lab.
 
