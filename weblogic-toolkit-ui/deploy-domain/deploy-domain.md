@@ -1,11 +1,13 @@
-# Deployment of WebLogic Domain to the Oracle Container Engine for Kubernetes (OKE) on Oracle Cloud Infrastructure (OCI) From WebLogic Kubernetes Toolkit UI
+# Deploy WebLogic Domain to Oracle Kubernetes Cluster (OKE)
 
 ## Introduction
 
 In this lab, we deploy the WebLogic Domain to kubernetes cluster. In primary image section, we specify the oracle account credential. In auxiliary image section, we specify oracle cloud account credential. Here we also specify the replica for the cluster.
 
+Estimated Time: 10 minutes
+
 Watch the video below for a quick walk-through of the lab.
-[Deploy WebLogic Domain to OKE Cluster](videohub:1_r13g2s73)
+[Deploy WebLogic Domain to OKE Cluster](videohub:1_wz94de1l)
 
 ### Objectives
 
@@ -57,4 +59,4 @@ In this task, we deploy the Kubernetes custom resource for the WebLogic domain t
 
 * **Author** -  Ankit Pandey
 * **Contributors** - Maciej Gruszka, Sid Joshi
-* **Last Updated By/Date** - Kamryn Vinson, March 2022
+* **Last Updated By/Date** - Ankit Pandey, August 2023

@@ -8,12 +8,12 @@
       "filename": "../../introduction/introduction.md"
     },
     {
-      "title": "Lab 1: Environment Setup",
+      "title": "Lab 1: Get Started",
       "description": "Verify Setup of compute instance",
       "filename": "https://oracle-livelabs.github.io/common/labs/verify-compute/verify-compute-ssh-and-novnc.md"
     },
     {
-      "title": "Lab 2: Setup the Lab Environment",
+      "title": "Lab 2: Setup the resources",
       "filename": "../../create-environment/create-environment.md"
     },
     {
@@ -52,6 +52,11 @@
       "title": "Need Help?",
       "description": "Solutions to Common Problems and Directions for Receiving Live Help",
       "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+    },
+    {
+      "title": "Oracle CloudWorld 2023 - Support",
+      "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+      "filename": "https://oracle-livelabs.github.io/common/support/ocwsupportlab/ocwsupportlab.md"
     }
   ]
 }
