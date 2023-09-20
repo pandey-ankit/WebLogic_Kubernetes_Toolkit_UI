@@ -20,7 +20,7 @@
     {
       "title": "Lab 2: Environment Setup",
       "description": "How to provision the workshop environment and connect to it",
-      "filename": "https://oracle-livelabs.github.io/common/labs/setup-compute-generic/setup-compute-novnc-ssh.md"
+      "filename": "../../remote-desktop/remote-desktop.md"
     },
     {
       "title": "Lab 3: Set up the resources",
