@@ -23,7 +23,7 @@ This lab assumes you have:
 
 1. Identify the ORM stack zip file downloaded in **Lab: Prepare Setup**.
 
-2. Open up the hamburger menu in the top left corner. Click **Developer Services**, and choose **Resource Manager** > &**Stacks**. Choose the compartment in which you would like to install the stack. Click **Create Stack**.
+2. Open up the hamburger menu in the top left corner. Click **Developer Services**, and choose **Resource Manager** > **Stacks**. Choose the compartment in which you would like to install the stack. Click **Create Stack**.
     ![menu stack](images/menu-stack.png)
     ![select compartment](images/select-compartment.png)
 
